@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CityFitness · Penny Wei</title>
+<meta name="description" content="CityFitness membership entitlement and class-access redesign. A self-initiated product design case study informed by usability testing with five gym members.">
+<script>try{var q=new URLSearchParams(location.search).get('theme');if(q)localStorage.setItem('theme',q);var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-ban" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M6 6l12 12"/></symbol><symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol><symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol><symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol><symbol id="i-unlock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 7.6-1.8"/></symbol><symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10.5h18M7 15h4"/></symbol><symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></symbol><symbol id="i-bell" viewBox="0 0 24 24"><path d="M4 18h16M6 18a6 6 0 0 1 12 0M12 12V9.5M10 9.5h4"/></symbol><symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></symbol><symbol id="i-headset" viewBox="0 0 24 24"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M19 19c0 1.5-2 2.5-5 2.5"/></symbol><symbol id="i-tag" viewBox="0 0 24 24"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.3"/></symbol><symbol id="i-code" viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></symbol><symbol id="i-door" viewBox="0 0 24 24"><path d="M5 21V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v17M3 21h18"/><circle cx="15" cy="12.5" r="1"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol><symbol id="i-ticket" viewBox="0 0 24 24"><path d="M4 5h16v4a3 3 0 0 0 0 6v4H4v-4a3 3 0 0 0 0-6z"/><path d="M14 6v12" stroke-dasharray="2 2.5"/></symbol><symbol id="i-hand" viewBox="0 0 24 24"><path d="M8 13V6a1.5 1.5 0 0 1 3 0v5m0-1V4.5a1.5 1.5 0 0 1 3 0V11m0-4a1.5 1.5 0 0 1 3 0v7a7 7 0 0 1-7 7h-.5a6 6 0 0 1-5-2.7L3 15.5a1.5 1.5 0 0 1 2.4-1.8L8 16"/></symbol><symbol id="i-family" viewBox="0 0 24 24"><circle cx="8" cy="6" r="2.5"/><circle cx="16.5" cy="10" r="2"/><path d="M4 21v-6a4 4 0 0 1 8 0v6M13.5 21v-4a3 3 0 0 1 6 0v4"/></symbol><symbol id="i-badge" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="10" r="2.5"/><path d="M8.5 17a3.5 3.5 0 0 1 7 0"/></symbol><symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V6z"/></symbol><symbol id="i-gauge" viewBox="0 0 24 24"><path d="M4 17a8 8 0 1 1 16 0"/><path d="M12 17l4-5"/></symbol><symbol id="i-frame" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M4 16l5-5 4 4 2-2 5 5"/></symbol><symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M11 12l8-8M16 7l2 2"/></symbol><symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol><symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5L2.5 20h19z"/><path d="M12 10v4.5M12 17.5v.01"/></symbol><symbol id="i-arrow-l" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol><symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol><symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol><symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol><symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></symbol><symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol><symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></symbol><symbol id="i-flow" viewBox="0 0 24 24"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><path d="M7 6h6a4 4 0 0 1 4 4v6"/></symbol><symbol id="i-list" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></symbol><symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></symbol><symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0M17 11a3 3 0 1 0 0-6M21 20a6 6 0 0 0-4-5.6"/></symbol><symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol><symbol id="i-building" viewBox="0 0 24 24"><path d="M4 21V5l8-3 8 3v16M2 21h20M9 21v-5h6v5"/></symbol><symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.5"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6 8.5-6"/></symbol></svg>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Penny Wei, home"><span class="brand-mark">P</span><span class="brand-txt">Penny Wei <span>· Product Designer · UX/UI · B2B SaaS</span></span></a>
+    <nav class="nav-links" id="navLinks" aria-label="Main">
+      <a href="index.html#work">Work</a>
+      <a href="cityfitness.html" aria-current="page">CityFitness</a>
+      <a href="te-papa.html">Te Papa</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="nav-tools">
+      <button class="icon-btn theme-btn" type="button" aria-label="Switch light or dark theme"><svg class="icon moon" aria-hidden="true"><use href="#i-moon"/></svg><svg class="icon sun" aria-hidden="true"><use href="#i-sun"/></svg></button>
+      <button class="icon-btn menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navLinks"><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <header class="case-top">
+    <div class="wrap">
+      <a class="back" href="index.html#work"><svg class="icon" aria-hidden="true"><use href="#i-arrow-l"/></svg>All work</a>
+      <div class="cl-row"><span class="eyebrow">Case 01 · CityFitness</span><span class="cl prop">Self-initiated case study · 2026 · not client work</span></div>
+      <h1 class="display">Membership entitlement &amp; <em>access</em> redesign</h1>
+      <p class="lead">The CityFitness app showed whether a class could be booked, but not whether your membership included it. Testing with five gym members surfaced two mental-model problems. I changed the eligibility experience and the class information architecture in response.</p>
+      <dl class="facts" style="grid-template-columns:repeat(3,minmax(0,1fr))">
+        <div><dt>Role</dt><dd>Product designer (solo)</dd></div>
+        <div><dt>Type</dt><dd>Self-initiated case study</dd></div>
+        <div><dt>Testing</dt><dd>Usability testing with 5 gym members</dd></div>
+        <div><dt>Tools</dt><dd>Figma · HTML/CSS prototype (coding assistance)</dd></div>
+        <div><dt>Status</dt><dd>Concept, not implemented</dd></div>
+        <div><dt>Engineering review</dt><dd>Not completed</dd></div>
+      </dl>
+      <div class="auth">
+        <p><b>Authorship:</b> I designed the UX, UI and interaction model, ran the usability testing and conducted an accessibility self-audit. Screens marked “Designed in Figma” are my Figma work. Diagrams and component specimens are an HTML/CSS prototype of my design. Prototype implementation: HTML/CSS, with coding assistance.</p>
+        <div class="legend" aria-label="Legend"><span class="tag figma">Designed in Figma</span><span class="tag html">HTML/CSS prototype · coding assistance</span></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="case-hero paper" aria-label="Redesigned screens">
+    <div class="wrap" style="grid-template-columns:1fr">
+      <figure>
+        <div class="trio" role="group" aria-label="Three CityFitness redesign screens showing a membership-aware class schedule, a restricted Yoga class with an access check before booking, and a Black Card versus Pro access comparison.">
+          <div class="iphone"><div class="bz"><div class="scr" style="--sb:#f7f9fd"><img src="assets/img/cf-schedule.png" alt="Class schedule with classes included with the card and classes needing a Pro upgrade in the same list"></div></div></div>
+          <div class="iphone" style="--pw:min(236px,40%);z-index:3"><div class="bz"><div class="scr" style="--sb:#cbcbcb"><img src="assets/img/cf-check.jpg" alt="Hot Power Yoga class detail with an access check: Black Card held, Pro Membership required, booking disabled, with an upgrade option"></div></div></div>
+          <div class="iphone"><div class="bz"><div class="scr" style="--sb:#8089a0;--sbt:#fff"><img src="assets/img/cf-compare.png" alt="Black Card versus Pro comparison of access by space and weekly price, with an upgrade button"></div></div></div>
+        </div>
+        <figcaption class="hero-cap"><span>Redesign: schedule → access check → upgrade</span><span class="tag figma">Designed in Figma</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="wrap" style="padding-top:56px">
+    <section class="tldr" id="cf-summary" aria-label="60-second summary">
+      <div class="t-h"><b>60-second summary</b><span class="mono muted">Each line links to its evidence below</span></div>
+      <div><h3>Problem</h3><p>The app showed whether a class could be booked, not whether the membership included it.</p></div>
+      <div><h3>Testing</h3><span class="big">5</span><p>gym members, focused on class discovery, eligibility, booking and navigation.</p></div>
+      <div><h3>Two findings</h3><ol><li><a href="#cf-f1">Bookable ≠ eligible</a></li><li><a href="#cf-f2">Group Class ≠ all group classes</a></li></ol></div>
+      <div><h3>Two design changes</h3><ol><li>Eligibility visible before booking</li><li>All group classes in one place, with eligibility on each</li></ol></div>
+      <div class="untested"><h3>Not yet validated</h3><ul><li>The redesigned experience has not yet been retested with users</li><li>Conversion or upgrade effect</li><li>Engineering feasibility</li></ul></div>
+    </section>
+  </div>
+
+  <nav class="tabs" aria-label="Case study sections" style="margin-top:56px">
+    <div class="wrap">
+      <ol>
+        <li><a href="#cf-failure"><span>01</span>Problem</a></li>
+        <li><a href="#cf-research"><span>02</span>Testing &amp; findings</a></li>
+        <li><a href="#cf-ui"><span>03</span>Key UI</a></li>
+        <li><a href="#cf-model"><span>04</span>System</a></li>
+        <li><a href="#cf-a11y-proof"><span>05</span>Accessibility</a></li>
+        <li><a href="#cf-impl-short"><span>06</span>Implementation</a></li>
+        <li><a href="#cf-untested"><span>07</span>Not yet validated</a></li>
+        <li><a href="#cf-detail"><span>+</span>Detail</a></li>
+      </ol>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <!-- 01 -->
+    <section class="sec" id="cf-failure">
+      <header class="sec-head">
+        <span class="sec-num">01</span>
+        <h2 class="h2">Problem: bookable isn't the same as eligible</h2>
+        <p class="lead">The original interface exposed booking availability but not membership eligibility.</p>
+      </header>
+      <div class="sub" id="cf-original" style="margin-top:40px">
+        <div class="sub-head"><h3>The original experience</h3></div>
+        <div class="cols cols-3">
+          <div class="col"><span class="cl obs" style="margin-bottom:10px">Observed · usability testing</span><h4>Booking didn't show eligibility</h4><p>A Black Card member could go ahead with booking Yoga and Pilates, which are Premium classes.</p></div>
+          <div class="col"><span class="cl obs" style="margin-bottom:10px">Observed · app walkthrough</span><h4>Classes split across two places</h4><p>Yoga and Pilates appeared under Explore, not in the Group Classes module.</p></div>
+          <div class="col"><span class="cl obs" style="margin-bottom:10px">Public information · checked 3 Oct 2026</span><h4>Membership rules live elsewhere</h4><p>CityFitness's public pages list Yoga and Pilates as Premium. Black Card is $14.99/week and Premium $18.99/week.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 -->
+    <section class="sec" id="cf-research">
+      <header class="sec-head">
+        <span class="sec-num">02</span>
+        <h2 class="h2">Usability testing</h2>
+        <p class="lead">5 gym members with experience booking fitness classes took part. Testing focused on class discovery, membership eligibility, booking and navigation. It surfaced two separate mental-model problems.</p>
+        <div class="cl-row"><span class="cl obs">Observed · usability testing</span></div>
+      </header>
+
+      <article class="finding f-elig" id="cf-f1" aria-labelledby="f1">
+        <div class="f-head">
+          <span class="f-num" aria-hidden="true">01</span>
+          <h3 id="f1">Bookable ≠ eligible</h3>
+          <div class="f-meta"><span class="f-kind"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Eligibility</span><span>More than one Black Card participant</span></div>
+        </div>
+        <div class="f-body">
+          <div>
+            <div class="mm"><span>Mental model (paraphrased)</span><b>If I can book it, my membership includes it.</b></div>
+            <div class="bfca">
+              <div><span class="k"><b>Before</b><span class="cl obs">Observed · testing</span></span><p>The original app let Black Card participants proceed with booking Yoga and Pilates. Nothing showed these needed Premium.</p></div>
+              <div><span class="k"><b>Finding</b><span class="cl obs">Observed · testing</span></span><p>Black Card participants didn't infer that Yoga and Pilates required Premium. They took the working booking path as proof the class was included.</p></div>
+              <div><span class="k"><b>Change</b><span class="cl prop">Proposed</span></span><p class="bchg">Show the membership requirement before the booking action. Black Card members see <q>Premium membership required</q> and can't book, but can still open the class and read its details.</p></div>
+              <div><span class="k"><b>After</b><span class="cl prop">Proposed</span></span><p>The upgrade path sits in context: <q>Upgrade to Premium +NZ$4/week</q>. The price is part of my proposed interface, based on the public weekly price difference. This creates a clearer upgrade path; its commercial effect is unvalidated.</p></div>
+            </div>
+          </div>
+          <figure class="f-vis">
+            <div class="iphone"><div class="bz"><div class="scr" style="--sb:#cbcbc9"><img src="assets/img/cf-check.jpg" alt="After: class detail for a Black Card member. The class information stays visible, the membership requirement is shown, booking is replaced by an upgrade path" loading="lazy"></div></div></div>
+            <figcaption><span>After · class detail, Black Card member</span><span class="tag figma">Designed in Figma</span></figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="finding f-ia" id="cf-f2" aria-labelledby="f2">
+        <div class="f-head">
+          <span class="f-num" aria-hidden="true">02</span>
+          <h3 id="f2">Group Class ≠ all group classes</h3>
+          <div class="f-meta"><span class="f-kind"><svg class="icon" aria-hidden="true"><use href="#i-grid"/></svg>Information architecture</span><span>One Premium participant · a findability problem, separate from Finding 01</span></div>
+        </div>
+        <div class="f-body">
+          <div>
+            <div class="mm"><span>Mental model (paraphrased)</span><b>Group Class = all group fitness classes.</b></div>
+            <div class="bfca">
+              <div><span class="k"><b>Before</b><span class="cl obs">Observed · app walkthrough</span></span><p>Yoga and Pilates were missing from the Group Class module and appeared under Explore.</p></div>
+              <div><span class="k"><b>Finding</b><span class="cl obs">Observed · testing</span></span><p>A Premium participant expected Yoga and Pilates under Group Class. Finding them under Explore conflicted with their understanding of the category.</p></div>
+              <div><span class="k"><b>Change</b><span class="cl prop">Proposed</span></span><p class="bchg">Bring all group classes into one discovery location, with membership eligibility shown next to each class.</p></div>
+              <div><span class="k"><b>After</b><span class="cl prop">Proposed</span></span><p>One schedule answers two questions together: what is the class, and can my membership access it. The member doesn't need to know the app's internal categories.</p></div>
+            </div>
+          </div>
+          <figure class="f-vis">
+            <div class="iphone"><div class="bz"><div class="scr" style="--sb:#f7f9fd"><img src="assets/img/cf-schedule.png" alt="After: one schedule of group classes, grouped by whether the member's card includes them, with Yoga and Pilates in the same list" loading="lazy"></div></div></div>
+            <figcaption><span>After · one schedule for group classes</span><span class="tag figma">Designed in Figma</span></figcaption>
+          </figure>
+        </div>
+      </article>
+      <p class="disclaim" style="margin-top:40px">No screenshots of the original app are shown. “Before” describes what participants encountered. Findings are paraphrased from my session notes; there are no direct quotes. The screens are still being updated to the Premium naming. Membership pricing shown in the redesign reflects CityFitness's publicly listed pricing as of October 2026; the membership-compare screen export still shows earlier placeholder prices and is being updated.</p>
+    </section>
+
+    <!-- 03 -->
+    <section class="sec" id="cf-ui">
+      <header class="sec-head">
+        <span class="sec-num">03</span>
+        <h2 class="h2">Key UI states</h2>
+        <p class="lead">How the two changes appear on screen. Callouts link to the decisions. ! marks a contrast problem from my audit.</p>
+        <div class="cl-row"><span class="tag figma">Designed in Figma</span></div>
+      </header>
+      <div class="annots">
+        <figure class="annot">
+          <div class="iphone"><div class="bz"><div class="scr" style="--sb:#f7f9fd">
+            <img src="assets/img/cf-schedule.png" alt="Class schedule with filters for All, I can book and Needs upgrade. Included classes have Book buttons. Restricted classes sit in a dashed group, visible but not bookable." loading="lazy">
+            <a class="pin" href="#cf-tradeoffs" style="left:100%;top:22.6%" aria-label="Callout 1: filters, see decisions">1</a>
+            <a class="pin" href="#cf-f2" style="left:0;top:28.9%" aria-label="Callout 2: eligibility on the row group, see finding 02">2</a>
+            <a class="pin" href="#cf-f1" style="left:100%;top:79%" aria-label="Callout 3: restricted classes in the same schedule, see finding 01">3</a>
+          </div></div></div>
+          <figcaption><span class="eyebrow">A · Schedule</span>
+            <ol class="notes">
+              <li><span class="n">1</span><div><b>“I can book” / “Needs upgrade” filters</b>Keep a longer list scannable. <a href="#cf-tradeoffs">→ decisions</a></div></li>
+              <li><span class="n">2</span><div><b>Eligibility on the row group</b>Included classes under a check and label. <a href="#cf-f2">→ finding 02</a></div></li>
+              <li><span class="n">3</span><div><b>Restricted, still listed</b>Dashed border, lock, label. ! Meta text 2.93:1. <a href="#cf-a11y-proof">→ 05</a></div></li>
+            </ol>
+          </figcaption>
+        </figure>
+        <figure class="annot">
+          <div class="iphone"><div class="bz"><div class="scr" style="--sb:#cbcbc9">
+            <img src="assets/img/cf-check.jpg" alt="Class detail with an access check comparing the member's membership with the one the class needs, a message, and two actions" loading="lazy">
+            <a class="pin" href="#cf-f1" style="left:100%;top:58.5%" aria-label="Callout 4: membership held versus required, see finding 01">4</a>
+            <a class="pin" href="#cf-f1" style="left:0;top:68.5%" aria-label="Callout 5: blocked state message, see finding 01">5</a>
+            <a class="pin" href="#cf-f1" style="left:100%;top:88.5%" aria-label="Callout 6: upgrade path, see finding 01">6</a>
+          </div></div></div>
+          <figcaption><span class="eyebrow">B · Class detail, blocked state</span>
+            <ol class="notes">
+              <li><span class="n">4</span><div><b>Held vs required</b>Both sides of the rule on two rows. <a href="#cf-f1">→ finding 01</a></div></li>
+              <li><span class="n">5</span><div><b>Blocked, explained</b>Class details stay readable. ! Warning title 3.69:1. <a href="#cf-a11y-proof">→ 05</a></div></li>
+              <li><span class="n">6</span><div><b>Upgrade instead of a dead end</b>The reason sits above the actions. <a href="#cf-f1">→ finding 01</a></div></li>
+            </ol>
+          </figcaption>
+        </figure>
+        <figure class="annot">
+          <div class="iphone"><div class="bz"><div class="scr" style="--sb:#8089a0;--sbt:#fff">
+            <img src="assets/img/cf-compare.png" alt="Membership comparison sheet over the class, comparing access by space, with weekly prices and an Upgrade button" loading="lazy">
+            <a class="pin" href="#cf-tradeoffs" style="left:100%;top:37%" aria-label="Callout 7: side-by-side comparison">7</a>
+            <a class="pin" href="#cf-tradeoffs" style="left:0;top:75%" aria-label="Callout 8: compared by space">8</a>
+            <a class="pin" href="#cf-tradeoffs" style="left:100%;top:90%" aria-label="Callout 9: one action with the cost">9</a>
+          </div></div></div>
+          <figcaption><span class="eyebrow">C · Upgrade state</span>
+            <ol class="notes">
+              <li><span class="n">7</span><div><b>Black Card vs Pro, side by side</b>The same rows in two columns. <a href="#cf-tradeoffs">→ decisions</a></div></li>
+              <li><span class="n">8</span><div><b>Compared by space</b>Only the rows that differ stand out. <a href="#cf-tradeoffs">→ decisions</a></div></li>
+              <li><span class="n">9</span><div><b>One action, cost on the button</b>“Not now” removed: Back already returns to the class. <a href="#cf-tradeoffs">→ decisions</a></div></li>
+            </ol>
+          </figcaption>
+        </figure>
+      </div>
+
+      
+      <p class="note sub" style="margin-top:48px">I extended the same eligibility logic across nine access states to check whether the rule held beyond the happy path. <a href="#cf-states" style="color:var(--ink);white-space:nowrap">View all 9 access states →</a></p>
+    </section>
+
+    <!-- 04 -->
+    <section class="sec" id="cf-model">
+      <header class="sec-head">
+        <span class="sec-num">04</span>
+        <h2 class="h2">System implications: View → Book → Attend</h2>
+        <p class="lead">Seeing a class, booking it and getting through the studio door are three separate checks. Finding 01 sits between View and Book. How CityFitness connects them today is unknown.</p>
+        <div class="cl-row"><span class="cl asm">Assumed · not verified</span><span class="cl prop">Proposed</span></div>
+      </header>
+      <figure class="dg sys" id="cf-diagram" style="max-width:760px;margin-bottom:56px" aria-label="System model. Current, assumed and not verified: booking and the studio door each hold their own copy of the tier rules, so Book can succeed while Attend fails. Proposed: the class's required tier is one attribute that View, Book, Attend and the door all read.">
+        <div class="sys-row">
+          <div class="dg-head"><b>Current</b><span class="cl asm">Assumed · not verified</span></div>
+          <div class="lane"><span class="node">Tier rules</span><i class="arr"></i><span class="node"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Booking service</span><i class="arr"></i><span class="node ok">Book<svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span></div>
+          <div class="drift">≠ two copies could drift apart</div>
+          <div class="lane"><span class="node copy">Tier rules (copy)</span><i class="arr"></i><span class="node"><svg class="icon" aria-hidden="true"><use href="#i-door"/></svg>Studio door</span><i class="arr bad"></i><span class="node bad">Attend<svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></span></div>
+        </div>
+        <div class="sys-row prop">
+          <div class="dg-head"><b>Proposed</b><span class="cl prop">Proposed</span></div>
+          <div class="src-line"><span class="node"><svg class="icon" aria-hidden="true"><use href="#i-card"/></svg>Membership tier</span><i class="arr"></i><span class="node src">Class: required tier</span></div>
+          <div class="bracket"><span>read by every state</span></div>
+          <div class="chain"><span class="node ok">View</span><i class="arr"></i><span class="node ok">Book</span><i class="arr"></i><span class="node ok">Attend</span><i class="arr"></i><span class="node ok"><svg class="icon" aria-hidden="true"><use href="#i-door"/></svg>Door</span></div>
+        </div>
+        <p class="fig-cap" style="display:flex;justify-content:flex-end"><span class="tag html">HTML/CSS prototype · coding assistance</span></p>
+      </figure>
+
+
+      <figure class="vba-big" aria-label="View, then Book, then Attend. View: every member can see every class. Book checks that the membership is active, the tier covers the class and a spot or waitlist place is available. Attend checks the booking, the tier for the studio, the check-in window and that the door is online. Today, in my assumed model, Book and Attend read different copies of the tier rules; proposed, both read the class's required tier.">
+        <div class="vb">
+          <span class="k">01 · in the app</span>
+          <h3>View</h3>
+          <p>Every member can see every class, including ones they can't book.</p>
+          <ul><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Class is on the timetable</li></ul>
+        </div>
+        <div class="vb-arr" aria-hidden="true"><svg class="icon"><use href="#i-arrow-r"/></svg></div>
+        <div class="vb">
+          <span class="k">02 · in the app</span>
+          <h3>Book</h3>
+          <p>A booking is only offered when all three checks pass.</p>
+          <ul><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Membership is active</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Tier covers the class</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Spot or waitlist place</li></ul>
+        </div>
+        <div class="vb-arr" aria-hidden="true"><svg class="icon"><use href="#i-arrow-r"/></svg></div>
+        <div class="vb">
+          <span class="k">03 · at the door</span>
+          <h3>Attend</h3>
+          <p>In the proposed model, access depends on the booking, membership eligibility and check-in conditions agreeing.</p>
+          <ul><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Booking exists</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Tier covers the studio</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Inside check-in window</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Door is online</li></ul>
+        </div>
+      </figure>
+
+      
+      
+      <p class="cap" style="margin-top:28px">Edge cases (downgrade with future bookings, a class moving studio, a door offline): <a href="#cf-console">Detail E</a>. Decisions and trade-offs: <a href="#cf-decisions">Detail B</a>.</p>
+    </section>
+
+    <!-- 05 -->
+    <section class="sec" id="cf-a11y-proof">
+      <header class="sec-head">
+        <span class="sec-num">05</span>
+        <h2 class="h2">Accessibility</h2>
+        <p class="lead">I measured contrast in my own screens and found five text failures against WCAG AA. Fixes are applied in the prototype specimens; the Figma screens above still show the originals. This is a self-audit, not a compliance claim. <a href="#cf-a11y" style="color:var(--ink)">Audit details ↓</a></p>
+        <div class="cl-row"><span class="cl obs">Observed · my own audit</span></div>
+      </header>
+      <figure class="ba" aria-label="Before, issue, fix. Meta text colour #8D97AD on white is 2.93 to 1, below the 4.5 to 1 needed. Changed to #5F6880, 5.56 to 1.">
+        <div class="app"><span class="kit-cap">Before</span><div class="arow st-upg" style="--a-meta:#8d97ad;--a-gold:#a9761a"><div class="arow-t">7:00<small>AM</small></div><div class="arow-b"><b>Hot Power Yoga</b><span class="arow-m">6 left · Lily · 60 min</span><span class="arow-s"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Premium membership required</span></div></div>
+          <div class="ratio"><span>Issue: meta #8D97AD · 2.93:1</span><span class="fail">Below 4.5:1</span></div></div>
+        <div class="arrow" aria-hidden="true">→</div>
+        <div class="app"><span class="kit-cap">Fix</span><div class="arow st-upg"><div class="arow-t">7:00<small>AM</small></div><div class="arow-b"><b>Hot Power Yoga</b><span class="arow-m">6 left · Lily · 60 min</span><span class="arow-s"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Premium membership required</span></div></div>
+          <div class="ratio"><span>Meta #5F6880 · 5.56:1</span><span class="pass">Meets 4.5:1</span></div></div>
+      </figure>
+      <div class="cols cols-4 sub" style="margin-top:40px">
+        <div class="col"><h4>Blocked state isn't colour alone</h4><p>Lock icon, dashed border and the words “Premium membership required”. The greyscale check is with the nine states in Detail D.</p></div>
+        <div class="col"><h4>Touch targets</h4><p>The original in-row Book button is about 53 × 33 pt. Prototype buttons are at least 44 pt tall.</p></div>
+        <div class="col"><h4>Disabled vs blocked</h4><p>No greyed-out Book button. The action is replaced by the reason and a next step.</p></div>
+        <div class="col"><h4>Focus and semantics</h4><p>2 px focus ring on every action. Each row reads as one sentence ending in its state and action.</p></div>
+      </div>
+    </section>
+
+
+    <!-- 06 -->
+    <section class="sec" id="cf-impl-short">
+      <header class="sec-head">
+        <span class="sec-num">06</span>
+        <h2 class="h2">Implementation considerations</h2>
+        <p class="lead">Questions an engineer would need to answer. Not reviewed by engineering; CityFitness's actual architecture is unknown.</p>
+        <div class="cl-row"><span class="cl unv">Not reviewed by engineering</span></div>
+      </header>
+      <div class="cols cols-3">
+        <div class="col strong"><h4>One rule for eligibility</h4><p>Proposed rule: schedule, class detail and the door read the same required-tier value. <code class="code">class.requiredTier</code> is a conceptual model, not CityFitness's schema.</p></div>
+        <div class="col strong"><h4>When eligibility can't load</h4><p>Proposed: don't offer Book until eligibility is known, and show an error state instead. Would require engineering review.</p></div>
+        <div class="col strong"><h4>After an upgrade</h4><p>The product would need a reliable way to refresh eligibility after a membership upgrade; caching behaviour would need engineering review.</p></div>
+      </div>
+      <p class="cap">The full rule → logic → component → state → edge case table: <a href="#cf-impl">Detail G</a>.</p>
+    </section>
+
+    <!-- 07 -->
+    <section class="sec" id="cf-untested">
+      <header class="sec-head">
+        <span class="sec-num">07</span>
+        <h2 class="h2">Not yet validated, and what I'd test next</h2>
+        <div class="cl-row"><span class="cl unv">Unvalidated</span></div>
+      </header>
+      <div class="cols cols-3">
+        <div class="col strong"><h4>The redesign</h4><p>The redesigned experience has not yet been retested with users, so I don't claim it fixes either finding. Next test: the same tasks on the redesign.</p></div>
+        <div class="col strong"><h4>Business effect</h4><p>Booking or upgrade conversion, support tickets, door overrides. Nothing measured.</p></div>
+        <div class="col strong"><h4>Engineering &amp; production</h4><p>Not built, not reviewed. Whether studio doors can read a class-level tier is unknown.</p></div>
+      </div>
+      <p class="cap">Plan for the next round: <a href="#cf-validation">Detail H</a>. Proposed metrics: <a href="#cf-next">Detail I</a>.</p>
+    </section>
+
+    <div class="depth-head" id="cf-detail"><h2>Detail</h2><span class="mono muted">For readers who want the full reasoning</span></div>
+      <details class="more" id="cf-context">
+        <summary><span class="sec-num">A</span><h3>Context, users &amp; roles</h3><span class="pm-ic" aria-hidden="true">+</span><p>Buyer vs user, six assumed roles, a modelled worst case, who would feel a mismatch.</p></summary>
+        <div class="in">
+      <div class="indent">
+        <div class="cols cols-4">
+          <div class="col"><span class="eyebrow">Buyer</span><p>Membership &amp; operations leadership (hypothetical)</p></div>
+          <div class="col"><span class="eyebrow">Primary users</span><p>Members booking classes</p></div>
+          <div class="col"><span class="eyebrow">Internal users</span><p>Front desk, club managers, support, sales</p></div>
+          <div class="col"><span class="eyebrow">Adjacent system</span><p>Studio door access control</p></div>
+        </div>
+        <div class="col strong sub" style="max-width:820px"><span class="eyebrow">Goal I set</span><p style="color:var(--ink);font-size:17px">A member should know whether their card opens a class before they book it, without adding steps for members who are already eligible.</p></div>
+      </div>
+      <div class="sub">
+        <div class="sub-head"><h3>Worst case, if booking and the studio door disagree</h3><span class="cl asm">Modelled, not observed</span></div>
+        <ol class="ftl">
+          <li><span class="dot"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span><span class="t">6:45pm</span><b>Books a Yoga class</b><p>A Black Card member taps Book. It goes through.</p></li>
+          <li class="pre-bad"><span class="dot"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span><span class="t">7:20pm</span><b>Arrives</b><p>Taps their card at the studio door.</p></li>
+          <li class="bad"><span class="dot"><svg class="icon" aria-hidden="true"><use href="#i-door"/></svg></span><span class="t">Door</span><b>Door stays shut</b><p>The door checks the tier and refuses.</p></li>
+          <li class="bad"><span class="dot"><svg class="icon" aria-hidden="true"><use href="#i-hand"/></svg></span><span class="t">Front desk</span><b>Override or refuse</b><p>Staff open the door or turn the member away.</p></li>
+          <li class="bad"><span class="dot"><svg class="icon" aria-hidden="true"><use href="#i-ticket"/></svg></span><span class="t">Later</span><b>Support ticket</b><p>The member asks why the app let them book.</p></li>
+        </ol>
+      </div>
+      <div class="sub"><div class="sub-head"><h3>Roles</h3><span class="cl asm">Assumed</span></div>
+      <div class="rows" role="table" aria-label="Roles, assumed needs and permission scope">
+        <div class="r h" role="row" style="grid-template-columns:1.1fr 1.4fr 1fr"><span role="columnheader">Role</span><span role="columnheader">Assumed need</span><span role="columnheader">Permission scope (proposed)</span></div>
+        <div class="r" role="row" style="grid-template-columns:1.1fr 1.4fr 1fr"><span role="cell" class="role"><i><svg class="icon" aria-hidden="true"><use href="#i-card"/></svg></i>Black Card member</span><div role="cell"><span class="lbl">Assumed need</span><p>Know what they can book before committing</p></div><div role="cell"><span class="lbl">Scope</span><p>Classes on their tier</p></div></div>
+        <div class="r" role="row" style="grid-template-columns:1.1fr 1.4fr 1fr"><span role="cell" class="role"><i><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg></i>Premium member</span><div role="cell"><span class="lbl">Assumed need</span><p>Book premium classes with no extra steps</p></div><div role="cell"><span class="lbl">Scope</span><p>All studios</p></div></div>
+        <div class="r" role="row" style="grid-template-columns:1.1fr 1.4fr 1fr"><span role="cell" class="role staff"><i><svg class="icon" aria-hidden="true"><use href="#i-bell"/></svg></i>Front-desk staff</span><div role="cell"><span class="lbl">Assumed need</span><p>Explain a refusal in one sentence</p></div><div role="cell"><span class="lbl">Scope</span><p>View entitlements</p></div></div>
+        <div class="r" role="row" style="grid-template-columns:1.1fr 1.4fr 1fr"><span role="cell" class="role staff"><i><svg class="icon" aria-hidden="true"><use href="#i-sliders"/></svg></i>Club manager</span><div role="cell"><span class="lbl">Assumed need</span><p>Protect limited class capacity</p></div><div role="cell"><span class="lbl">Scope</span><p>Class &amp; studio config</p></div></div>
+        <div class="r" role="row" style="grid-template-columns:1.1fr 1.4fr 1fr"><span role="cell" class="role staff"><i><svg class="icon" aria-hidden="true"><use href="#i-headset"/></svg></i>Support agent</span><div role="cell"><span class="lbl">Assumed need</span><p>Trace why entry failed</p></div><div role="cell"><span class="lbl">Scope</span><p>Booking &amp; door history</p></div></div>
+        <div class="r" role="row" style="grid-template-columns:1.1fr 1.4fr 1fr"><span role="cell" class="role staff"><i><svg class="icon" aria-hidden="true"><use href="#i-tag"/></svg></i>Sales / membership</span><div role="cell"><span class="lbl">Assumed need</span><p>A visible upgrade path</p></div><div role="cell"><span class="lbl">Scope</span><p>Tier pricing &amp; offers</p></div></div>
+      </div></div>
+      <div class="sub">
+        <div class="sub-head"><h3>Who would feel it, if it happens</h3><span class="cl asm">Assumed</span></div>
+        <div class="cols cols-4">
+          <div class="col"><span class="role staff"><i><svg class="icon" aria-hidden="true"><use href="#i-headset"/></svg></i>Customer support</span><p style="margin-top:12px">Could receive refused-entry complaints with no record in the app of why entry failed.</p></div>
+          <div class="col"><span class="role staff"><i><svg class="icon" aria-hidden="true"><use href="#i-sliders"/></svg></i>Club operations</span><p style="margin-top:12px">Desk staff might open doors manually, and ineligible bookings could take spots in limited classes.</p></div>
+          <div class="col"><span class="role staff"><i><svg class="icon" aria-hidden="true"><use href="#i-tag"/></svg></i>Sales &amp; membership</span><p style="margin-top:12px">A refused card could be the first time a member learns about the tier difference.</p></div>
+          <div class="col"><span class="role staff"><i><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></i>Engineering</span><p style="margin-top:12px">Two copies of the tier rules could drift apart when a class or studio changes.</p></div>
+        </div>
+      </div>
+      <p class="disclaim">Self-initiated concept. Not commissioned by, affiliated with or endorsed by CityFitness. No CityFitness staff were involved. Prototype implementation: HTML/CSS, with coding assistance (Claude).</p>
+        </div>
+      </details>
+      <details class="more" id="cf-decisions">
+        <summary><span class="sec-num">B</span><h3>Decisions &amp; trade-offs</h3><span class="pm-ic" aria-hidden="true">+</span><p>Why each change was made, what it costs, and its status.</p></summary>
+        <div class="in">
+      
+        <div class="rows dwts" role="table" aria-label="Design decisions" id="cf-tradeoffs">
+          <div class="r h" role="row"><span>Decision</span><span>Why</span><span>Trade-off</span><span>Status</span></div>
+          <div class="r" role="row" id="cf-d1"><b role="cell">Eligibility visible before booking</b><div role="cell"><span class="lbl">Why</span><p>Finding 01</p></div><div role="cell"><span class="lbl">Trade-off</span><p>Busier schedule; offset with “I can book” and “Needs upgrade” filters</p></div><div role="cell"><span class="cl prop">Proposed</span></div></div>
+          <div class="r" role="row" id="cf-d2"><b role="cell">All group classes in one place</b><div role="cell"><span class="lbl">Why</span><p>Finding 02</p></div><div role="cell"><span class="lbl">Trade-off</span><p>Premium-only classes sit next to classes a member can't book</p></div><div role="cell"><span class="cl prop">Proposed</span></div></div>
+          <div class="r" role="row" id="cf-d3"><b role="cell">Class details stay open when booking is blocked</b><div role="cell"><span class="lbl">Why</span><p>A blocked class should still explain itself</p></div><div role="cell"><span class="lbl">Trade-off</span><p>Members may open classes they can't book</p></div><div role="cell"><span class="cl prop">Proposed</span></div></div>
+          <div class="r" role="row" id="cf-d4"><b role="cell">Upgrade cost shown, Back to leave</b><div role="cell"><span class="lbl">Why</span><p>A restriction without a next step is a dead end</p></div><div role="cell"><span class="lbl">Trade-off</span><p>I removed “Not now” because it duplicated the Back button; leaving relies on Back</p></div><div role="cell"><span class="cl unv">Effect untested</span></div></div>
+        </div>      
+        </div>
+      </details>
+      <details class="more" id="cf-evidence">
+        <summary><span class="sec-num">C</span><h3>Evidence, assumptions &amp; constraints</h3><span class="pm-ic" aria-hidden="true">+</span><p>What is observed, assumed, proposed and still unvalidated.</p></summary>
+        <div class="in">
+      <figure aria-label="18 statements: 4 observed, 4 assumed, 4 proposed, 6 unvalidated">
+        <div class="ev">
+          <span class="o" style="flex:4">4 <span class="lbl">observed</span></span>
+          <span class="a" style="flex:4">4 <span class="lbl">assumed</span></span>
+          <span class="p" style="flex:4">4 <span class="lbl">proposed</span></span>
+          <span class="u" style="flex:6">6 <span class="lbl">unvalidated</span></span>
+        </div>
+        <div class="ev-legend"><span>18 statements</span><span>Testing added two observed findings</span></div>
+      </figure>
+      <div class="cols cols-4 ev-cols" style="margin-top:40px">
+        <div class="col o"><span class="cl obs">What I observed</span><p class="muted">Public information, my walkthrough, testing</p>
+          <ul><li><b>Public membership pages.</b> CityFitness lists Basic, Black Card and Premium. Yoga and Pilates are part of Premium, not Black Card. Black Card is $14.99/week and Premium $18.99/week.</li>
+          <li><b>Current app.</b> My walkthrough of booking and class detail.</li>
+          <li><b>Testing, finding 01.</b> More than one Black Card participant read the booking path as proof that a class was included.</li>
+          <li><b>Testing, finding 02.</b> One Premium participant expected Yoga and Pilates under Group Class.</li></ul>
+          <p class="src">Checked 3 Oct 2026: <a href="https://www.cityfitness.co.nz/memberships">cityfitness.co.nz/memberships</a> · <a href="https://help.cityfitness.co.nz/what-membership-do-i-need-to-attend-classes-at-cityfitness">help centre</a></p></div>
+        <div class="col a"><span class="cl asm">Assumptions</span><p class="muted">Reasonable, not verified</p>
+          <ul><li><b>Architecture.</b> How booking and studio-door access are connected internally hasn't been verified. I modelled them as separate checks.</li>
+          <li><b>Door hardware.</b> Doors already read a membership tier and would stay as they are.</li>
+          <li><b>Capacity.</b> Premium classes have limited spots, so an ineligible booking costs a real place.</li>
+          <li><b>Roles.</b> The six staff and member roles below.</li></ul></div>
+        <div class="col p"><span class="cl prop">Proposed</span><p class="muted">My design decisions</p>
+          <ul><li><b>One entitlement model</b> read by booking and door access.</li>
+          <li><b>Separate View, Book and Attend states.</b></li>
+          <li><b>A nine-state access component</b> on every class row and class detail.</li>
+          <li><b>Fail closed:</b> if access can't be confirmed, Book isn't offered.</li></ul></div>
+        <div class="col u"><span class="cl unv">Not yet validated</span><p class="muted">Hypotheses</p>
+          <ul><li>how often booking and the studio door actually disagree;</li>
+          <li>whether tier rules are held separately by booking and door systems;</li>
+          <li>how much support or front-desk work refusals create;</li>
+          <li>whether the redesign fixes either finding (the redesigned experience has not yet been retested with users);</li>
+          <li>whether the upgrade path changes upgrade decisions;</li>
+          <li>whether the door can read a class-level tier.</li></ul></div>
+      </div>
+      <div class="sub"><div class="sub-head"><h3>Constraints</h3><span class="cl asm">Assumed</span></div>
+      <div class="cols cols-4">
+        <div class="col"><h4>Door hardware stays as it is</h4><p>It already reads a membership tier</p></div>
+        <div class="col"><h4>Premium classes have limited spots</h4><p>Ineligible bookings would cost real places</p></div>
+        <div class="col"><h4>No extra steps for eligible members</h4><p>Premium members book in one tap</p></div>
+        <div class="col"><h4>One release scope</h4><p>Classes and studio doors only. Personal training and guest passes later.</p></div>
+      </div></div>
+        </div>
+      </details>
+      <details class="more" id="cf-states">
+        <summary><span class="sec-num">D</span><h3>Nine access states</h3><span class="pm-ic" aria-hidden="true">+</span><p>The eligibility rule applied beyond the happy path, with a greyscale check and an interactive View / Book / Attend example.</p></summary>
+        <div class="in">
+      <div class="sub" style="margin-top:0">
+        <div class="sub-head"><h3>Access State component</h3><button class="toggle" type="button" data-grey aria-pressed="false" aria-controls="states9">View in greyscale</button></div>
+        <div class="app">
+          <div class="states9" id="states9">
+            <div><span class="st-name">1 · Eligible</span><div class="arow st-elig"><div class="arow-t">6:00<small>AM</small></div><div class="arow-b"><b>Group Power</b><span class="arow-m">12 left · Renee · 55 min</span><span class="arow-s"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Included with your card</span></div><div class="arow-a"><span class="ab ab-soft">Book</span></div></div></div>
+            <div><span class="st-name">2 · Booked</span><div class="arow st-booked"><div class="arow-t">9:15<small>AM</small></div><div class="arow-b"><b>Group Power</b><span class="arow-m">Studio 1 · 55 min</span><span class="arow-s"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>Booked · door opens 9:00</span></div><div class="arow-a"><span class="ab ab-ink">View</span></div></div></div>
+            <div><span class="st-name">3 · Not eligible</span><div class="arow st-notel"><div class="arow-t">12:00<small>PM</small></div><div class="arow-b"><b>Group Fight</b><span class="arow-m">9 left · Tui · 45 min</span><span class="arow-s"><svg class="icon" aria-hidden="true"><use href="#i-ban"/></svg>Membership paused until 12 Sep</span></div><div class="arow-a"><span class="ab ab-line">Manage</span></div></div></div>
+            <div><span class="st-name">4 · Upgrade required</span><div class="arow st-upg"><div class="arow-t">7:00<small>AM</small></div><div class="arow-b"><b>Hot Power Yoga</b><span class="arow-m">6 left · Lily · 60 min</span><span class="arow-s"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Needs Premium · Hot studio</span></div><div class="arow-a"><span class="ab ab-gold">Compare</span></div></div></div>
+            <div><span class="st-name">5 · Waitlist</span><div class="arow st-wait"><div class="arow-t">5:30<small>PM</small></div><div class="arow-b"><b>HIIT</b><span class="arow-m">0 left · Jesse · 45 min</span><span class="arow-s"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>Waitlist open · 3 ahead</span></div><div class="arow-a"><span class="ab ab-line">Join waitlist</span></div></div></div>
+            <div><span class="st-name">6 · Class full</span><div class="arow st-full"><div class="arow-t">6:30<small>PM</small></div><div class="arow-b"><b>Spin</b><span class="arow-m">0 left · Mere · 45 min</span><span class="arow-s"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg>Full · waitlist closed</span></div><div class="arow-a"><span class="nostat">No spots</span></div></div></div>
+            <div><span class="st-name">7 · Access unavailable</span><div class="arow st-unav"><div class="arow-t">7:00<small>PM</small></div><div class="arow-b"><b>Group Power</b><span class="arow-m">Booked · Studio 1</span><span class="arow-s"><svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg>Studio door offline · show this booking at the desk</span></div><div class="arow-a"><span class="ab ab-line">Show</span></div></div></div>
+            <div><span class="st-name">8 · Booking expired</span><div class="arow st-exp"><div class="arow-t">7:00<small>AM</small></div><div class="arow-b"><b>Pilates Mat</b><span class="arow-m">Studio 3 · 45 min</span><span class="arow-s"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>Check-in closed at 7:10</span></div><div class="arow-a"><span class="ab ab-text">Book again</span></div></div></div>
+            <div><span class="st-name">9 · Booking cancelled</span><div class="arow st-cxl"><div class="arow-t">8:30<small>AM</small></div><div class="arow-b"><b>Pilates Reformer</b><span class="arow-m">Reformer room</span><span class="arow-s"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg>Cancelled by club · instructor unwell</span></div><div class="arow-a"><span class="ab ab-text">Rebook</span></div></div></div>
+          </div>
+        </div>
+
+        <div class="rows sub" role="table" aria-label="Access state specification" style="margin-top:32px">
+          <div class="r h" role="row" style="grid-template-columns:.9fr 1.2fr 1fr 1.7fr .8fr"><span>State</span><span>Visual &amp; text</span><span>Interaction</span><span>Screen reader (row name ends with)</span><span>View · Book · Attend</span></div>
+          <div class="r" role="row" style="grid-template-columns:.9fr 1.2fr 1fr 1.7fr .8fr"><b>Eligible</b><div><span class="lbl">Visual &amp; text</span><p>Check icon + “Included with your card”</p></div><div><span class="lbl">Interaction</span><p>Book → confirmation</p></div><div><span class="lbl">Screen reader</span><p>“Included with your card. Book.”</p></div><div><span class="vbamini"><i class="y">✓</i><i class="y">✓</i><i class="q">–</i></span></div></div>
+          <div class="r" role="row" style="grid-template-columns:.9fr 1.2fr 1fr 1.7fr .8fr"><b>Booked</b><div><span class="lbl">Visual &amp; text</span><p>Ink border, calendar icon, door time</p></div><div><span class="lbl">Interaction</span><p>View booking, cancel inside</p></div><div><span class="lbl">Screen reader</span><p>“Booked. Door opens 9:00. View booking.”</p></div><div><span class="vbamini"><i class="y">✓</i><i class="y">✓</i><i class="y">✓</i></span></div></div>
+          <div class="r" role="row" style="grid-template-columns:.9fr 1.2fr 1fr 1.7fr .8fr"><b>Not eligible</b><div><span class="lbl">Visual &amp; text</span><p>Ban icon + the reason (e.g. paused). No upgrade offered.</p></div><div><span class="lbl">Interaction</span><p>Manage membership</p></div><div><span class="lbl">Screen reader</span><p>“Can't book: membership paused until 12 September.”</p></div><div><span class="vbamini"><i class="y">✓</i><i class="n">✕</i><i class="n">✕</i></span></div></div>
+          <div class="r" role="row" style="grid-template-columns:.9fr 1.2fr 1fr 1.7fr .8fr"><b>Upgrade required</b><div><span class="lbl">Visual &amp; text</span><p>Dashed gold border, lock, “Needs Premium · studio”</p></div><div><span class="lbl">Interaction</span><p>Compare → upgrade or back</p></div><div><span class="lbl">Screen reader</span><p>“Needs Premium. Your Black Card won't open the Hot studio. Compare memberships.”</p></div><div><span class="vbamini"><i class="y">✓</i><i class="n">✕</i><i class="n">✕</i></span></div></div>
+          <div class="r" role="row" style="grid-template-columns:.9fr 1.2fr 1fr 1.7fr .8fr"><b>Waitlist</b><div><span class="lbl">Visual &amp; text</span><p>Clock + position. Never uses tier styling.</p></div><div><span class="lbl">Interaction</span><p>Join → position shown</p></div><div><span class="lbl">Screen reader</span><p>“Full. Waitlist open, 3 ahead. Join waitlist.”</p></div><div><span class="vbamini"><i class="y">✓</i><i class="q">~</i><i class="q">–</i></span></div></div>
+          <div class="r" role="row" style="grid-template-columns:.9fr 1.2fr 1fr 1.7fr .8fr"><b>Class full</b><div><span class="lbl">Visual &amp; text</span><p>People icon + “Full · waitlist closed”</p></div><div><span class="lbl">Interaction</span><p>None. Text, not a disabled button.</p></div><div><span class="lbl">Screen reader</span><p>“Full. Waitlist closed.”</p></div><div><span class="vbamini"><i class="y">✓</i><i class="n">✕</i><i class="q">–</i></span></div></div>
+          <div class="r" role="row" style="grid-template-columns:.9fr 1.2fr 1fr 1.7fr .8fr"><b>Access unavailable</b><div><span class="lbl">Visual &amp; text</span><p>Red tint, alert icon, what to do instead</p></div><div><span class="lbl">Interaction</span><p>Show booking to staff</p></div><div><span class="lbl">Screen reader</span><p>“Studio door offline. Show this booking at the front desk.”</p></div><div><span class="vbamini"><i class="y">✓</i><i class="y">✓</i><i class="n">✕</i></span></div></div>
+          <div class="r" role="row" style="grid-template-columns:.9fr 1.2fr 1fr 1.7fr .8fr"><b>Booking expired</b><div><span class="lbl">Visual &amp; text</span><p>Muted title, clock + closing time</p></div><div><span class="lbl">Interaction</span><p>Book again (if spots)</p></div><div><span class="lbl">Screen reader</span><p>“Booking expired. Check-in closed at 7:10.”</p></div><div><span class="vbamini"><i class="y">✓</i><i class="q">–</i><i class="n">✕</i></span></div></div>
+          <div class="r" role="row" style="grid-template-columns:.9fr 1.2fr 1fr 1.7fr .8fr"><b>Booking cancelled</b><div><span class="lbl">Visual &amp; text</span><p>Struck-through title, cross + who cancelled and why</p></div><div><span class="lbl">Interaction</span><p>Rebook (if spots)</p></div><div><span class="lbl">Screen reader</span><p>“Cancelled by the club: instructor unwell. Rebook.”</p></div><div><span class="vbamini"><i class="y">✓</i><i class="q">–</i><i class="n">✕</i></span></div></div>
+        </div>
+        <p class="cap">Every state has its own icon and its own words, so it still reads without colour (try the greyscale toggle). A tier problem (“Upgrade required”) never looks like a capacity problem (“Waitlist”, “Class full”). Last column: ✓ allowed, ✕ blocked, ~ conditional, – not applicable.</p>
+      </div>
+
+      
+      <div class="demo sub" data-demo="card">
+        <div>
+          <div class="cl-row"><span class="eyebrow">Try it</span><span class="cl prop">Proposed behaviour</span></div>
+          <h3 class="h3" style="margin-top:12px">What can this card do?</h3>
+          <div class="seg" role="group" aria-label="Choose a membership">
+            <button type="button" data-card="black" aria-pressed="true">Black Card</button>
+            <button type="button" data-card="pro" aria-pressed="false">Premium</button>
+          </div>
+          <p class="mono muted">Class: Hot Power Yoga · hot studio</p>
+        </div>
+        <div>
+          <div class="vba" aria-live="polite">
+            <div><svg class="icon" aria-hidden="true"><use href="#i-eye"/></svg><b>View</b><span>Allowed</span></div>
+            <div data-state="book"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><b>Book</b><span>Allowed</span></div>
+            <div data-state="attend"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><b>Attend</b><span>Allowed</span></div>
+          </div>
+          <p class="cap" data-note></p>
+        </div>
+      </div>
+        </div>
+      </details>
+      <details class="more" id="cf-console">
+        <summary><span class="sec-num">E</span><h3>Exploring an operational edge case</h3><span class="pm-ic" aria-hidden="true">+</span><p>Five edge cases, two unresolved, and an illustrative club-manager console.</p></summary>
+        <div class="in">
+      <div class="rows" role="table" aria-label="Edge cases">
+        <div class="r h" role="row" style="grid-template-columns:1.3fr 1.6fr .9fr"><span>Edge case</span><span>What the member sees</span><span>Status</span></div>
+        <div class="r" role="row" style="grid-template-columns:1.3fr 1.6fr .9fr"><b>Member upgrades mid-session</b><div><span class="lbl">Member sees</span><p>Rows refresh to “Premium · included” without a restart</p></div><div><span class="cl prop">Proposed</span></div></div>
+        <div class="r" role="row" style="grid-template-columns:1.3fr 1.6fr .9fr"><b>Last spot taken between view and Book</b><div><span class="lbl">Member sees</span><p>“Someone just took the last spot. Join the waitlist?”</p></div><div><span class="cl prop">Proposed</span></div></div>
+        <div class="r" role="row" style="grid-template-columns:1.3fr 1.6fr .9fr"><b>Door offline at check-in</b><div><span class="lbl">Member sees</span><p>Access unavailable state + show booking at the desk</p></div><div><span class="cl prop">Proposed</span></div></div>
+        <div class="r" role="row" style="grid-template-columns:1.3fr 1.6fr .9fr"><b>Member downgrades with future Premium bookings</b><div><span class="lbl">Member sees</span><p>Not designed. Cancel, keep until end of period, or warn before downgrade?</p></div><div><span class="cl unv">Unresolved</span></div></div>
+        <div class="r" role="row" style="grid-template-columns:1.3fr 1.6fr .9fr"><b>A class moves to a Premium studio after people booked</b><div><span class="lbl">Member sees</span><p>Depends on the choice below</p></div><div><span class="cl unv">Unresolved</span></div></div>
+      </div>
+
+      <div class="sub">
+        <div class="sub-head"><h3>Club manager console: moving a class to a Premium studio</h3><span class="cl concept">Illustrative concept</span></div>
+        <p class="prose" style="margin-bottom:28px"><span style="color:var(--ink-2)">The club manager re-tags every affected session in one action and sees how many existing bookings change before confirming. I default to honouring existing bookings and flagging them for the front desk, because cancelling them silently recreates the refused-door problem. This only works if the door can let a Black Card member into Studio 3 once, and I don't know whether it can.</span></p>
+        <figure class="console" aria-label="Illustrative club-manager console. Group Power moves to Studio 3, which needs Premium. Three groups of sessions, 14 in total, change from Black Card to Premium. Nine existing bookings are affected. An unresolved choice asks what happens to them: honour and flag for the desk (selected), cancel with notice, or offer the upgrade.">
+          <div class="bar"><i></i><i></i><i></i><span>club-console · Thorndon · Classes</span></div>
+          <div class="body">
+            <nav aria-hidden="true">
+              <div class="org">Club console<small>Club manager</small></div>
+              <a class="on"><svg class="icon"><use href="#i-calendar"/></svg>Classes</a>
+              <a><svg class="icon"><use href="#i-building"/></svg>Studios</a>
+              <a><svg class="icon"><use href="#i-door"/></svg>Doors</a>
+              <a><svg class="icon"><use href="#i-users"/></svg>Members</a>
+            </nav>
+            <main>
+              <p class="crumb">Classes / Group Power / Move studio</p>
+              <h4>Group Power moves to Studio 3</h4>
+              <p class="desc">Studio 3 needs Premium. Re-tag every affected session in one action.</p>
+              <div class="ctable" role="table" aria-label="Sessions to re-tag">
+                <div class="tr th" role="row"><span></span><span>Sessions</span><span>Count</span><span>Required tier</span></div>
+                <div class="tr" role="row"><span class="cb on"><svg class="icon"><use href="#i-check"/></svg></span><span>Mon–Fri 6:00</span><span>5 sessions</span><span class="chg"><s>Black Card</s>→<span class="tierpill pro">Premium</span></span></div>
+                <div class="tr" role="row"><span class="cb on"><svg class="icon"><use href="#i-check"/></svg></span><span>Sat–Sun 9:15</span><span>4 sessions</span><span class="chg"><s>Black Card</s>→<span class="tierpill pro">Premium</span></span></div>
+                <div class="tr" role="row"><span class="cb on"><svg class="icon"><use href="#i-check"/></svg></span><span>Tue/Thu 18:00</span><span>5 sessions</span><span class="chg"><s>Black Card</s>→<span class="tierpill pro">Premium</span></span></div>
+              </div>
+              <div class="impact"><span><b>14 sessions</b> selected</span><span><b>9 existing bookings</b> affected</span></div>
+              <div class="choice">
+                <div class="q"><b>Existing bookings · 9</b><span class="mono muted">What happens to them?</span></div>
+                <div class="opt"><span class="radio on"></span><div><b>Honour + flag for desk</b> · default</div></div>
+                <div class="opt"><span class="radio"></span><div><b>Cancel with notice</b></div></div>
+                <div class="opt"><span class="radio"></span><div><b>Offer the upgrade</b></div></div>
+                <div class="open-q"><span class="cl unv">Unresolved</span><div>Only works if the door can let a Black Card member into Studio 3 once.</div></div>
+              </div>
+              <div class="cbtns"><span class="cbtn">Preview member impact</span><span class="cbtn p">Apply re-tag</span></div>
+            </main>
+          </div>
+        </figure>
+        <p class="fig-cap">Illustrative numbers · 14 sessions · 9 bookings affected</p>
+      </div>
+        </div>
+      </details>
+      <details class="more" id="cf-a11y">
+        <summary><span class="sec-num">F</span><h3>Accessibility audit details</h3><span class="pm-ic" aria-hidden="true">+</span><p>Contrast ratios, touch targets, screen-reader names, focus and large text.</p></summary>
+        <div class="in">
+      <p class="lead" style="margin-bottom:28px">My own audit of the concept screens against WCAG 2.2 AA. The component specimens use the fixes. <span class="cl obs">Observed · my own audit</span> <span class="cl unv">Not tested with assistive-technology users</span></p>
+
+      <div class="sub-head" style="margin-top:0"><h3>Colour contrast, measured from the screen exports</h3><span class="mono muted">AA needs 4.5:1 for text under 18.66 px bold / 24 px regular</span></div>
+      <div class="rows ca" role="table" aria-label="Contrast audit">
+        <div class="r h" role="row"><span>Text</span><span>Ratio</span><span>Result</span><span>Proposed fix</span><span>New ratio</span></div>
+        <div class="r" role="row"><span class="chip2"><i style="background:#8d97ad"></i>Meta text (“Jesse · 45 min”) on white</span><div><span class="lbl">Ratio</span><p>2.93:1</p></div><div><span class="fail">Fail</span></div><div><span class="lbl">Fix</span><p>#8D97AD → #5F6880</p></div><div><span class="pass">5.56:1</span></div></div>
+        <div class="r" role="row"><span class="chip2"><i style="background:#a6afc2"></i>Section labels (“MORNING”)</span><div><span class="lbl">Ratio</span><p>2.09:1</p></div><div><span class="fail">Fail</span></div><div><span class="lbl">Fix</span><p>#A6AFC2 → #677089</p></div><div><span class="pass">4.68:1</span></div></div>
+        <div class="r" role="row"><span class="chip2"><i style="background:#8d97ad"></i>“Not now” exit on the upgrade sheet</span><div><span class="lbl">Ratio</span><p>2.93:1</p></div><div><span class="fail">Fail</span></div><div><span class="lbl">Fix</span><p>Earlier version only; “Not now” was later removed (Back returns to the class)</p></div><div><span class="pass">5.56:1</span></div></div>
+        <div class="r" role="row"><span class="chip2"><i style="background:#2f6bff"></i>“Book” text on light-blue button</span><div><span class="lbl">Ratio</span><p>3.94:1</p></div><div><span class="fail">Fail</span></div><div><span class="lbl">Fix</span><p>#2F6BFF → #2457D6</p></div><div><span class="pass">5.40:1</span></div></div>
+        <div class="r" role="row"><span class="chip2"><i style="background:#a9761a"></i>Gold “PRO” label and warning title</span><div><span class="lbl">Ratio</span><p>3.97 / 3.69:1</p></div><div><span class="fail">Fail</span></div><div><span class="lbl">Fix</span><p>#A9761A → #8A5F0F</p></div><div><span class="pass">5.64 / 5.24:1</span></div></div>
+        <div class="r" role="row"><span class="chip2"><i style="background:#2f6bff"></i>White on blue “Upgrade to Premium”</span><div><span class="lbl">Ratio</span><p>4.50:1</p></div><div><span class="pass">Pass, no margin</span></div><div><span class="lbl">Fix</span><p>#2457D6 for headroom</p></div><div><span class="pass">6.16:1</span></div></div>
+        <div class="r" role="row"><span class="chip2"><i style="background:#0f7a49"></i>Green “OPEN”, navy titles, warning body</span><div><span class="lbl">Ratio</span><p>5.4 / 15.9 / 5.5:1</p></div><div><span class="pass">Pass</span></div><div><span class="lbl">Fix</span><p>—</p></div><div></div></div>
+      </div>
+
+      <div class="cols cols-3 sub">
+        <div class="col"><h4>Status never relies on colour</h4><p>Each of the nine states has its own icon and words. The greyscale check in Detail D shows they still read.</p></div>
+        <div class="col"><h4>Touch targets</h4><p>The in-row “Book” button measures about 53 × 33 pt. That passes WCAG 2.2 AA (24 × 24) but is below Apple's 44 × 44 pt guideline. Specimens use a 44 pt minimum.</p></div>
+        <div class="col"><h4>Plain-language messages</h4><p>“Not available” becomes “Your Black Card won't open the Hot studio.” Errors say what happened and what still works: “Booking is paused so you don't book a class your card can't open.”</p></div>
+        <div class="col"><h4>Screen-reader names</h4><p>Each row reads as one sentence: class, time, state, then the action, e.g. “Hot Power Yoga, 7 AM, 60 minutes. Needs Premium. Compare memberships.” Booking results are announced politely.</p></div>
+        <div class="col"><h4>Focus and large text</h4><p>A 2 px focus ring with an offset on every action. At about 200% text the row stacks and the action goes full width instead of truncating.</p></div>
+        <div class="col"><h4>Predictable, lower load</h4><p>One action per row, always in the same place. A disabled Book button is replaced by the reason, so nobody taps a dead control.</p></div>
+      </div>
+        </div>
+      </details>
+      <details class="more" id="cf-impl">
+        <summary><span class="sec-num">G</span><h3>Implementation considerations</h3><span class="pm-ic" aria-hidden="true">+</span><p>Business rule → logic → component → state → edge case → consideration. Not reviewed by engineering.</p></summary>
+        <div class="in">
+      <div class="rows impl" role="table" aria-label="Business rule to implementation consideration">
+        <div class="r h" role="row"><span>Business rule →</span><span>Entitlement logic →</span><span>UI component →</span><span>Interaction state →</span><span>Edge case →</span><span>Implementation consideration</span></div>
+        <div class="r" role="row"><div><span class="lbl">Business rule</span><p>Hot studio classes need Premium</p></div><div><span class="lbl">Logic</span><p><code>member.tiers ⊇ class.requiredTier</code></p></div><div><span class="lbl">Component</span><p>Schedule row, class detail</p></div><div><span class="lbl">State</span><p>Upgrade required</p></div><div><span class="lbl">Edge case</span><p>Member upgrades mid-session</p></div><div><span class="lbl">Consideration</span><p>Eligibility needs a reliable refresh after upgrade; caching would need engineering review.</p></div></div>
+        <div class="r" role="row"><div><span class="lbl">Business rule</span><p>Classes have limited spots</p></div><div><span class="lbl">Logic</span><p><code>spotsLeft &gt; 0</code> or waitlist open</p></div><div><span class="lbl">Component</span><p>Row action</p></div><div><span class="lbl">State</span><p>Waitlist / Class full</p></div><div><span class="lbl">Edge case</span><p>Last spot taken after the row loaded</p></div><div><span class="lbl">Consideration</span><p>Booking would need server-side validation; the app should offer the waitlist instead of a generic error.</p></div></div>
+        <div class="r" role="row"><div><span class="lbl">Business rule</span><p>Door admits booked members on the right tier</p></div><div><span class="lbl">Logic</span><p><code>booked ∧ tierOK ∧ inCheckInWindow</code></p></div><div><span class="lbl">Component</span><p>Booking card at the door</p></div><div><span class="lbl">State</span><p>Access unavailable / Booking expired</p></div><div><span class="lbl">Edge case</span><p>Door offline</p></div><div><span class="lbl">Consideration</span><p>Proposed: the door reads the same rule as booking, with a desk fallback. Actual door integration unknown.</p></div></div>
+        <div class="r" role="row"><div><span class="lbl">Business rule</span><p>Paused memberships can't book</p></div><div><span class="lbl">Logic</span><p><code>membership.status = active</code></p></div><div><span class="lbl">Component</span><p>Schedule row</p></div><div><span class="lbl">State</span><p>Not eligible</p></div><div><span class="lbl">Edge case</span><p>Entitlement service unreachable</p></div><div><span class="lbl">Consideration</span><p>Proposed: don't show Book until access is known; show the error state. Needs engineering review.</p></div></div>
+      </div>
+      <div class="sub">
+        <div class="sub-head"><h3>Conceptual data model</h3></div>
+        <div class="deps"><span>member.tiers</span><span>membership.status</span><span>class.requiredTier</span><span>class.studio</span><span>class.spotsLeft</span><span>waitlist.position</span><span>booking.status</span><span>checkIn.window</span><span>door.status</span></div>
+        <p class="cap" style="max-width:72ch">Conceptual fields used to describe the rules, not CityFitness's actual schema. Which data exists in production, and where eligibility is decided, is unknown.</p>
+      </div>
+        </div>
+      </details>
+      <details class="more" id="cf-validation">
+        <summary><span class="sec-num">H</span><h3>Next round of testing</h3><span class="pm-ic" aria-hidden="true">+</span><p>Plan for testing the redesign itself.</p></summary>
+        <div class="in">
+      <div class="cols cols-3 plan">
+        <div class="col strong"><span class="eyebrow">Who to recruit</span><ul><li>5 members again, mixing Black Card and Premium</li><li>1–2 front-desk staff, if a club agrees</li></ul></div>
+        <div class="col strong"><span class="eyebrow">Tasks on the redesign</span><ul><li>Find a class you can book tonight</li><li>You want a Yoga class. What does the app tell you, and what would you do?</li><li>Leave the upgrade screen without upgrading</li><li>Your booking shows “door offline”. What do you do?</li></ul></div>
+        <div class="col strong"><span class="eyebrow">Questions for staff</span><ul><li>How often do you open a studio door manually, and why?</li><li>How do you explain a refused card today?</li></ul></div>
+        <div class="col"><span class="eyebrow">Assumptions to check</span><ul><li>Booking/door mismatches happen at all</li><li>Restricted rows are noticed before tapping</li><li>Members find Back to leave the upgrade sheet</li><li>The door can read a class-level tier</li></ul></div>
+        <div class="col"><span class="eyebrow">What would change the design</span><ul><li>Restrictions still missed → stronger grouping, or “I can book” as the default filter</li><li>Mismatches never happen → reframe around tier clarity</li><li>Door can't read class tier → model access per studio</li></ul></div>
+        <div class="col"><span class="eyebrow">What I won't claim</span><ul><li>Five sessions show what confuses people, not how often</li><li>Front-desk input is one club's view</li></ul></div>
+      </div>
+        </div>
+      </details>
+<details class="more" id="cf-next">
+        <summary><span class="sec-num">I</span><h3>Proposed metrics</h3><span class="pm-ic" aria-hidden="true">+</span><p>Three proposed measures. No baseline or production data.</p></summary>
+        <div class="in">
+      <div class="rows metrics" role="table" aria-label="Proposed metrics">
+        <div class="r h" role="row"><span>Metric</span><span>Type</span><span>Possible source (assumed)</span><span>Status</span></div>
+        <div class="r" role="row"><b>Eligibility comprehension / booking error rate</b><div><span class="lbl">Type</span><p>UX</p></div><div><span class="lbl">Source</span><p>Usability tasks; booking attempts on ineligible classes</p></div><div><span class="cl unv">No baseline</span></div></div>
+        <div class="r" role="row"><b>Booking-to-access mismatch rate</b><div><span class="lbl">Type</span><p>Operational</p></div><div><span class="lbl">Source</span><p>Booking and door logs</p></div><div><span class="cl unv">No baseline</span></div></div>
+        <div class="r" role="row"><b>Upgrade starts from a restricted-class state</b><div><span class="lbl">Type</span><p>Commercial</p></div><div><span class="lbl">Source</span><p>App analytics</p></div><div><span class="cl unv">No baseline</span></div></div>
+      </div>
+      <p class="cap">Proposed metrics only — no baseline or production data available.</p>
+        </div>
+      </details>
+      <details class="more" id="cf-foundations">
+        <summary><span class="sec-num">J</span><h3>Foundations, buttons, system states &amp; responsive</h3><span class="pm-ic" aria-hidden="true">+</span><p>Type, colour, spacing, badges, button states, loading/empty/error/confirmation, large text.</p></summary>
+        <div class="in">
+
+      <div class="sub-head" style="margin-top:0"><h3>Foundations</h3><span class="mono muted">Approximate values measured from the concept screens · colours after the section 12 contrast fixes</span></div>
+      <div class="app">
+        <div class="found">
+          <div><span class="kit-cap">Type</span>
+            <ul class="tscale">
+              <li><b style="font-size:28px;letter-spacing:-.02em">Classes</b><span>Screen title ≈32 / 700</span></li>
+              <li><b style="font-size:17px">Hot Power Yoga</b><span>Row title ≈18 / 600</span></li>
+              <li><span style="font-size:15px;font-family:var(--sans);color:var(--a-ink)">Your card won't open the Hot studio</span><span>Body ≈16 / 400</span></li>
+              <li><span style="font-size:13px;font-family:var(--sans);color:var(--a-meta)">6 left · Lily · 60 min</span><span>Meta ≈14 / 500</span></li>
+              <li><span style="font-size:11px;font-family:var(--sans);font-weight:600;letter-spacing:.1em;color:var(--a-meta)">MORNING</span><span>Label ≈12 / 600 caps</span></li>
+            </ul></div>
+          <div><span class="kit-cap">Colour · role</span>
+            <div class="swatches">
+              <div class="swatch"><i style="background:#0e1c3d"></i><div>Ink · text, booked<br><code>#0E1C3D · 15.9:1</code></div></div>
+              <div class="swatch"><i style="background:#2457d6"></i><div>Action<br><code>#2457D6 · 6.2:1 white</code></div></div>
+              <div class="swatch"><i style="background:#8a5f0f"></i><div>Premium / locked<br><code>#8A5F0F · 5.6:1</code></div></div>
+              <div class="swatch"><i style="background:#0f7a49"></i><div>Included<br><code>#0F7A49 · 5.4:1</code></div></div>
+              <div class="swatch"><i style="background:#b42318"></i><div>Access problem<br><code>#B42318</code></div></div>
+              <div class="swatch"><i style="background:#5f6880"></i><div>Meta text<br><code>#5F6880 · 5.6:1</code></div></div>
+            </div></div>
+          <div><span class="kit-cap">Spacing · 4-pt steps</span>
+            <div class="spacing">
+              <div><i style="width:4px"></i>4 · icon to label</div>
+              <div><i style="width:8px"></i>8 · between rows</div>
+              <div><i style="width:12px"></i>12 · row columns</div>
+              <div><i style="width:16px"></i>16 · row padding</div>
+              <div><i style="width:20px"></i>20 · screen margin</div>
+              <div><i style="width:24px"></i>24 · between groups</div>
+            </div>
+            <span class="kit-cap">Membership badges</span>
+            <div class="kit-row"><span class="badge b-black"><svg class="icon" aria-hidden="true"><use href="#i-card"/></svg>Black Card</span><span class="badge b-pro">Premium</span><span class="badge b-class"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Premium</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub">
+        <div class="sub-head"><h3>Buttons</h3></div>
+        <div class="app">
+          <div class="kit">
+            <div><span class="kit-cap">Primary · secondary · in-row</span>
+              <div class="kit-row"><span class="ab ab-pri">Upgrade to Premium</span><span class="ab ab-line">Learn about Premium</span><span class="ab ab-soft">Book</span></div>
+              <span class="kit-cap">Focus (keyboard and switch access)</span>
+              <div class="kit-row"><span class="ab ab-soft ab-focus">Book</span><span class="ab ab-pri ab-focus">Upgrade to Premium</span></div></div>
+            <div><span class="kit-cap">Loading: label stays, spinner added, announced</span>
+              <div class="kit-row"><span class="ab ab-pri" aria-busy="true"><i class="spin" aria-hidden="true"></i>Booking…</span></div>
+              <span class="kit-cap">Unavailable: replaced by a reason, not greyed out</span>
+              <div class="kit-row" style="display:block"><span class="badge b-class"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Booking off</span><span class="reason">Your Black Card won't open the Hot studio. Premium adds it.</span></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub">
+        <div class="sub-head"><h3>Loading, empty, error and confirmation</h3></div>
+        <div class="sys4">
+          <div class="app"><span class="cap4">Loading</span>
+            <div class="sk"><i style="width:40%"></i><i style="width:75%"></i><i style="width:55%"></i></div>
+            <div class="sk"><i style="width:35%"></i><i style="width:70%"></i><i style="width:50%"></i></div>
+            <p class="live-note">Announced: “Checking your access…”. Book isn't shown until access is known.</p></div>
+          <div class="app"><span class="cap4">Empty · “I can book” filter</span>
+            <div class="msg"><b>No classes you can book on Saturday</b><p>6 classes need Premium. Sunday has 5 you can book.</p></div>
+            <div class="kit-row"><span class="ab ab-line">Show Sunday</span><span class="ab ab-text">Show all</span></div></div>
+          <div class="app"><span class="cap4">Error · access check failed</span>
+            <div class="msg err"><b>We couldn't check your membership</b><p>Booking is paused so you don't book a class your card can't open.</p></div>
+            <div class="kit-row"><span class="ab ab-pri">Try again</span></div></div>
+          <div class="app"><span class="cap4">Confirmation</span>
+            <div class="toast"><b><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Booked</b>Hot Power Yoga · Sat 7:00 AM<br>Your card opens the Hot studio from 6:45.</div>
+            <div class="kit-row"><span class="ab ab-line">Add to calendar</span></div>
+            <p class="live-note">Announced politely. Focus stays on the row the member booked.</p></div>
+        </div>
+      </div>
+
+      <div class="sub">
+        <div class="sub-head"><h3>Responsive behaviour</h3></div>
+        <div class="resp">
+          <div class="app"><span class="kit-cap">320 pt, default text</span>
+            <div class="arow st-upg"><div class="arow-t">7:00<small>AM</small></div><div class="arow-b"><b>Hot Power Yoga</b><span class="arow-m">6 left · 60 min</span><span class="arow-s"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Needs Premium</span></div><div class="arow-a"><span class="ab ab-gold">Compare</span></div></div></div>
+          <div class="app"><span class="kit-cap">Large text (about 200%): action moves under the row and goes full width</span>
+            <div class="arow st-upg stack"><div class="arow-t">7:00<small>AM</small></div><div class="arow-b"><b>Hot Power Yoga</b><span class="arow-m">6 left · Lily · 60 min</span><span class="arow-s"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Needs Premium · Hot studio</span></div><div class="arow-a"><span class="ab ab-gold">Compare memberships</span></div></div></div>
+        </div>
+        <p class="cap">At narrow widths the status line shortens (studio name drops), never the action. At large text sizes the row stacks instead of truncating.</p>
+      </div>
+        </div>
+      </details>
+      <details class="more" id="cf-flow">
+        <summary><span class="sec-num">K</span><h3>User flows</h3><span class="pm-ic" aria-hidden="true">+</span><p>Eligible, upgrade required, going back and at the door.</p></summary>
+        <div class="in">
+      <figure class="flows" aria-label="User flows. Eligible: schedule, class detail showing included, book, booked confirmation that the door opens from 6:45. Upgrade required: schedule row marked Premium, class detail access check, compare tiers, then either review upgrade and book, or go back to the class detail. At the door: booked, the door reads the class required tier and opens; if the door is offline the member shows the booking at the front desk.">
+        <div class="flowrow">
+          <div class="fl-l"><b>Eligible</b><span>Black Card · Group Power</span></div>
+          <div class="fl"><span class="node">Schedule <small>Included</small></span><i class="arr"></i><span class="node">Class detail</span><i class="arr"></i><span class="node src">Book</span><i class="arr"></i><span class="node ok"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Booked · door opens 6:45</span></div>
+        </div>
+        <div class="flowrow">
+          <div class="fl-l"><b>Upgrade required</b><span>Black Card · Hot Power Yoga</span></div>
+          <div class="fl"><span class="node">Schedule <small>Premium</small></span><i class="arr"></i><span class="node">Access check</span><i class="arr"></i><span class="node">Compare tiers</span><i class="arr"></i><span class="node src">Upgrade</span><i class="arr"></i><span class="node ok"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Booked</span></div>
+        </div>
+        <div class="flowrow">
+          <div class="fl-l"><b>Back</b><span>same member, leaves without upgrading</span></div>
+          <div class="fl"><span class="node">Compare tiers</span><i class="arr"></i><span class="node">Back</span><i class="arr"></i><span class="node">Class detail</span></div>
+        </div>
+        <div class="flowrow">
+          <div class="fl-l"><b>At the door</b><span>after booking</span></div>
+          <div class="fl"><span class="node">Booked</span><i class="arr"></i><span class="node"><svg class="icon" aria-hidden="true"><use href="#i-door"/></svg>Door reads required tier</span><i class="arr"></i><span class="node ok">Opens</span><i class="arr bad"></i><span class="node bad">Door offline → show booking at desk</span></div>
+        </div>
+      </figure>
+        </div>
+      </details>
+
+    <nav class="next" aria-label="More work">
+      <a href="index.html#work"><small>← Back</small><b>All work</b></a>
+      <a href="te-papa.html"><small>Next case</small><b>Te Papa Families →</b></a>
+    </nav>
+  </div>
+</main>
+
+
+<footer>
+  <div class="wrap">
+    <span>Penny Wei · Product Designer · Wellington, NZ</span>
+    <span>Case studies are self-initiated concepts, not affiliated with CityFitness or Te Papa.</span>
+    <a href="#">Back to top ↑</a>
+  </div>
+</footer>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

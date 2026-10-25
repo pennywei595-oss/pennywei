@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Te Papa Families · Penny Wei</title>
+<meta name="description" content="Te Papa Families is a self-initiated family museum navigation concept exploring low-friction wayfinding, changing plans and privacy-aware support. No user or staff testing has been conducted.">
+<script>try{var q=new URLSearchParams(location.search).get('theme');if(q)localStorage.setItem('theme',q);var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-ban" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M6 6l12 12"/></symbol><symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol><symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol><symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol><symbol id="i-unlock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 7.6-1.8"/></symbol><symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10.5h18M7 15h4"/></symbol><symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></symbol><symbol id="i-bell" viewBox="0 0 24 24"><path d="M4 18h16M6 18a6 6 0 0 1 12 0M12 12V9.5M10 9.5h4"/></symbol><symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></symbol><symbol id="i-headset" viewBox="0 0 24 24"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M19 19c0 1.5-2 2.5-5 2.5"/></symbol><symbol id="i-tag" viewBox="0 0 24 24"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.3"/></symbol><symbol id="i-code" viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></symbol><symbol id="i-door" viewBox="0 0 24 24"><path d="M5 21V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v17M3 21h18"/><circle cx="15" cy="12.5" r="1"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol><symbol id="i-ticket" viewBox="0 0 24 24"><path d="M4 5h16v4a3 3 0 0 0 0 6v4H4v-4a3 3 0 0 0 0-6z"/><path d="M14 6v12" stroke-dasharray="2 2.5"/></symbol><symbol id="i-hand" viewBox="0 0 24 24"><path d="M8 13V6a1.5 1.5 0 0 1 3 0v5m0-1V4.5a1.5 1.5 0 0 1 3 0V11m0-4a1.5 1.5 0 0 1 3 0v7a7 7 0 0 1-7 7h-.5a6 6 0 0 1-5-2.7L3 15.5a1.5 1.5 0 0 1 2.4-1.8L8 16"/></symbol><symbol id="i-family" viewBox="0 0 24 24"><circle cx="8" cy="6" r="2.5"/><circle cx="16.5" cy="10" r="2"/><path d="M4 21v-6a4 4 0 0 1 8 0v6M13.5 21v-4a3 3 0 0 1 6 0v4"/></symbol><symbol id="i-badge" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="10" r="2.5"/><path d="M8.5 17a3.5 3.5 0 0 1 7 0"/></symbol><symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V6z"/></symbol><symbol id="i-gauge" viewBox="0 0 24 24"><path d="M4 17a8 8 0 1 1 16 0"/><path d="M12 17l4-5"/></symbol><symbol id="i-frame" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M4 16l5-5 4 4 2-2 5 5"/></symbol><symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M11 12l8-8M16 7l2 2"/></symbol><symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol><symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5L2.5 20h19z"/><path d="M12 10v4.5M12 17.5v.01"/></symbol><symbol id="i-arrow-l" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol><symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol><symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol><symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol><symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></symbol><symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol><symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></symbol><symbol id="i-flow" viewBox="0 0 24 24"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><path d="M7 6h6a4 4 0 0 1 4 4v6"/></symbol><symbol id="i-list" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></symbol><symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></symbol><symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0M17 11a3 3 0 1 0 0-6M21 20a6 6 0 0 0-4-5.6"/></symbol><symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol><symbol id="i-building" viewBox="0 0 24 24"><path d="M4 21V5l8-3 8 3v16M2 21h20M9 21v-5h6v5"/></symbol><symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.5"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6 8.5-6"/></symbol></svg>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Penny Wei, home"><span class="brand-mark">P</span><span class="brand-txt">Penny Wei <span>· Product Designer · UX/UI · B2B SaaS</span></span></a>
+    <nav class="nav-links" id="navLinks" aria-label="Main">
+      <a href="index.html#work">Work</a>
+      <a href="cityfitness.html">CityFitness</a>
+      <a href="te-papa.html" aria-current="page">Te Papa</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="nav-tools">
+      <button class="icon-btn theme-btn" type="button" aria-label="Switch light or dark theme"><svg class="icon moon" aria-hidden="true"><use href="#i-moon"/></svg><svg class="icon sun" aria-hidden="true"><use href="#i-sun"/></svg></button>
+      <button class="icon-btn menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navLinks"><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <header class="case-top">
+    <div class="wrap">
+      <a class="back" href="index.html#work"><svg class="icon" aria-hidden="true"><use href="#i-arrow-l"/></svg>All work</a>
+      <div class="cl-row"><span class="eyebrow">Case 02 · Te Papa Families</span><span class="cl prop">Self-initiated concept</span></div>
+      <h1 class="display">A family visit companion for when plans <em>change</em> inside a busy museum.</h1>
+      <p class="lead">I explored how a mobile experience could help families make quick decisions during a museum visit — where to go next, how to respond when a floor gets busy, and where to find an immediate need such as a toilet, seat or exit. Te Papa is the setting for this self-initiated concept. The family needs, staff workflows and operational assumptions have not been validated with visitors or museum staff.</p>
+      <dl class="facts" style="grid-template-columns:repeat(3,minmax(0,1fr))">
+        <div><dt>Role</dt><dd>Product designer (solo)</dd></div>
+        <div><dt>Type</dt><dd>Self-initiated concept, not client work</dd></div>
+        <div><dt>Research</dt><dd>Desk research only · no user or staff sessions</dd></div>
+        <div><dt>Tools</dt><dd>Figma · HTML/CSS prototype (coding assistance)</dd></div>
+        <div><dt>Status</dt><dd>Concept, not implemented</dd></div>
+        <div><dt>Engineering review</dt><dd>Not completed</dd></div>
+      </dl>
+      <div class="auth">
+        <p><b>Authorship:</b> I designed the family experience, interaction flows, UI and design system, and explored the service and privacy implications behind the concept. I also conducted an accessibility self-audit of the concept screens. Screens marked “Designed in Figma” are my Figma work. Diagrams and operational specimens are HTML/CSS prototypes of my design; I used coding assistance to implement them.</p>
+        <div class="legend" aria-label="Legend"><span class="tag figma">Designed in Figma</span><span class="tag html">HTML/CSS prototype · coding assistance</span></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="case-hero paper" aria-label="Concept screens">
+    <div class="wrap" style="grid-template-columns:1fr">
+      <figure>
+        <div class="trio">
+          <div class="iphone"><div class="bz"><div class="scr" style="--sb:#f2efe9"><img src="assets/img/tp-map.png" alt="Map guiding the family to the nearest family toilet, one minute away, with crowd levels per gallery"></div></div></div>
+          <div class="iphone"><div class="bz"><div class="scr" style="--sb:#f2efe9"><img src="assets/img/tp-home.png" alt="Home screen: how busy each level is right now, and a route that fits the child's energy"></div></div></div>
+          <div class="iphone"><div class="bz"><div class="scr" style="--sb:#af2317;--sbt:#fff"><img src="assets/img/tp-alert.png" alt="Lost-child screen: one tap alerts staff and shows the child's card"></div></div></div>
+        </div>
+        <figcaption class="hero-cap"><span>Family navigation · changing plans · immediate help</span><span class="tag figma">Designed in Figma</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="wrap" style="padding-top:56px">
+    <section class="tldr" id="tp-summary" aria-label="60-second summary">
+      <div class="t-h"><b>60-second summary</b><span class="mono muted">Secondary case study · not tested with users</span></div>
+      <div><h3>Problem hypothesis</h3><p>Family visits can involve frequent small decisions while attention is divided between the museum, the child and practical needs. This is a hypothesis, not a research finding.</p></div>
+      <div><h3>Research status</h3><span class="big">0</span><p>user or staff sessions. Public visitor information and desk research only.</p></div>
+      <div><h3>What I designed</h3><ol><li>Quick access to immediate needs</li><li>A route shaped by family context</li><li>Suggested route changes when conditions change</li></ol></div>
+      <div><h3>Design principle</h3><p style="color:var(--ink);font-size:16px;font-weight:500">Suggest, explain and let the visitor decide.</p></div>
+      <div class="untested"><h3>Not yet validated</h3><ul><li>Whether these are the right family needs</li><li>Whether families would follow a suggested reroute</li><li>Whether the urgent-support workflow matches museum practice</li></ul></div>
+    </section>
+  </div>
+
+  <nav class="tabs" aria-label="Case study sections" style="margin-top:56px">
+    <div class="wrap">
+      <ol>
+        <li><a href="#tp-problem"><span>01</span>Problem hypothesis</a></li>
+        <li><a href="#tp-experience"><span>02</span>Family experience</a></li>
+        <li><a href="#tp-design"><span>03</span>Design decisions</a></li>
+        <li><a href="#tp-ui"><span>04</span>Key UI</a></li>
+        <li><a href="#tp-edge"><span>05</span>High-stakes edge case</a></li>
+        <li><a href="#tp-a11y"><span>06</span>Accessibility</a></li>
+        <li><a href="#tp-test"><span>07</span>What I would test</a></li>
+        <li><a href="#tp-detail"><span>+</span>Detail</a></li>
+      </ol>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <!-- 01 -->
+    <section class="sec" id="tp-problem">
+      <header class="sec-head">
+        <span class="sec-num">01</span>
+        <h2 class="h2">Family visits involve small decisions under divided attention.</h2>
+        <p class="lead">I started with a set of hypotheses about what can make a museum visit harder for a parent or caregiver: practical needs, changing energy levels, crowding and unexpected situations. I did not validate these with families, so they remain design hypotheses.</p>
+        <div class="cl-row"><span class="cl asm">Assumed · needs field research</span></div>
+      </header>
+      <div class="cols cols-4">
+        <div class="col"><h4>Immediate needs</h4><p>A parent may need to find a toilet, seat, snack or exit quickly without navigating several screens.</p></div>
+        <div class="col"><h4>Family energy</h4><p>The best next stop may depend on children's energy, available time and whether the family is using a pram.</p></div>
+        <div class="col"><h4>Changing conditions</h4><p>A route that looked reasonable at the start of the visit may become less useful when part of the museum gets busy.</p></div>
+        <div class="col"><h4>Limited attention</h4><p>Interaction may need to work while the caregiver is walking, watching children and making decisions at the same time.</p></div>
+      </div>
+    </section>
+
+    <!-- 02 -->
+    <section class="sec" id="tp-experience">
+      <header class="sec-head">
+        <span class="sec-num">02</span>
+        <h2 class="h2">The experience is designed around “what do we do next?”</h2>
+        <p class="lead">Instead of asking families to build a detailed itinerary, the concept focuses on decisions made during the visit.</p>
+        <div class="cl-row"><span class="cl prop">Proposed</span></div>
+      </header>
+      <div class="cols cols-3">
+        <div class="col strong"><span class="eyebrow">1</span><h4>Start with context</h4><p>Three lightweight inputs — children, pram and energy level — shape an initial route.</p></div>
+        <div class="col strong"><span class="eyebrow">2</span><h4>Respond to change</h4><p>If a floor becomes busy, the app explains what changed and suggests a different order. The visitor can accept or keep the original plan.</p></div>
+        <div class="col strong"><span class="eyebrow">3</span><h4>Get somewhere now</h4><p>Toilet, Seat, Snack and Exit remain directly accessible when the planned route stops being the priority.</p></div>
+      </div>
+    </section>
+
+    <!-- 03 -->
+    <section class="sec" id="tp-design">
+      <header class="sec-head">
+        <span class="sec-num">03</span>
+        <h2 class="h2">Design decisions</h2>
+        <p class="lead">Three decisions shape the concept. None has been tested with families.</p>
+        <div class="cl-row"><span class="cl prop">Proposed</span></div>
+      </header>
+      <div class="dec" id="tp-d1"><span class="num">1</span><div><h3>Three questions, then a route</h3><p>Children, pram and energy level produce an initial route. I chose three lightweight inputs because I expected a full itinerary to need too much setup at the door. I haven't timed or tested the setup with real families.</p></div></div>
+      <div class="dec" id="tp-d2"><span class="num">2</span><div><h3>Suggest, don't force</h3><p>When a floor gets busy, the app says what changed, suggests swapping two stops and previews the new order. The visitor chooses “Swap order” or “Keep”; nothing reroutes without their confirmation. I chose this to protect visitor control. I haven't tested whether families prefer it.</p></div></div>
+      <div class="dec" id="tp-d3"><span class="num">3</span><div><h3>Useful without an account</h3><p>The concept provides navigation and family setup without requiring an account. For the high-stakes alert concept, child information is proposed to remain on-device until a parent explicitly shares it for that case. This is a proposed privacy-minimising approach, not a confirmed Te Papa requirement.</p></div></div>
+
+      <div class="sub">
+        <div class="sub-head"><h3>Routing options I compared</h3><span class="mono muted">Compared on paper, not with users</span></div>
+        <div class="rows dwts" role="table" aria-label="Options considered">
+          <div class="r h" role="row"><span>Option</span><span>Why</span><span>Trade-off</span><span>Status</span></div>
+          <div class="r" role="row"><b role="cell">Itinerary builder</b><div role="cell"><span class="lbl">Why</span><p>Pick and reorder exhibits</p></div><div role="cell"><span class="lbl">Trade-off</span><p>I expected too much setup at the door, and plans that break when a floor gets busy</p></div><div role="cell"><span class="mono muted">Not chosen</span></div></div>
+          <div class="r" role="row"><b role="cell">Map-first heatmap</b><div role="cell"><span class="lbl">Why</span><p>Crowding shown on the map</p></div><div role="cell"><span class="lbl">Trade-off</span><p>Would need more granular data than I could assume; I expected it to be hard to read one-handed</p></div><div role="cell"><span class="mono muted">Not chosen</span></div></div>
+          <div class="r" role="row"><b role="cell">Three-question setup, then reroute</b><div role="cell"><span class="lbl">Why</span><p>Works with the assumed floor-level data and a three-state meter</p></div><div role="cell"><span class="lbl">Trade-off</span><p>The route can't tell which gallery is busy</p></div><div role="cell"><span class="cl prop">Chosen</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 -->
+    <section class="sec" id="tp-ui">
+      <header class="sec-head">
+        <span class="sec-num">04</span>
+        <h2 class="h2">Key UI</h2>
+        <p class="lead">Three family-facing screens. Callouts link to the decisions above.</p>
+        <div class="cl-row"><span class="tag figma">Designed in Figma</span></div>
+      </header>
+      <div class="annots">
+        <figure class="annot">
+          <div class="iphone"><div class="bz"><div class="scr" style="--sb:#f2efe9">
+            <img src="assets/img/tp-home.png" alt="Home: how busy each of three levels is right now, a 75-minute route that fits Mia's energy, Dinosaurs moved later because it's busy until 11:30, and a dark I need now band with Toilet, Seat, Snack and Exit." loading="lazy">
+            <a class="pin" href="#tp-d1" style="left:100%;top:25%" aria-label="Callout 1: floor busyness, see decision 1">1</a>
+            <a class="pin" href="#tp-d1" style="left:0;top:36%" aria-label="Callout 2: route fits energy, see decision 1">2</a>
+            <a class="pin" href="#tp-d2" style="left:100%;top:59%" aria-label="Callout 3: busy stop moved later, see decision 2">3</a>
+            <a class="pin" href="#tp-experience" style="left:0;top:88%" aria-label="Callout 4: I need now band, see family experience">4</a>
+          </div></div></div>
+          <figcaption><span class="eyebrow">A · Home / family route</span>
+            <ol class="notes">
+              <li><span class="n">1</span><div><b>Floor busyness, three states</b>Quiet, Some, Busy. <a href="#tp-d1">→ decision 1</a></div></li>
+              <li><span class="n">2</span><div><b>A route that fits the kids</b>Energy becomes a time strip. <a href="#tp-d1">→ decision 1</a></div></li>
+              <li><span class="n">3</span><div><b>Busy stop moved later</b>The reason is on the row. <a href="#tp-d2">→ decision 2</a></div></li>
+              <li><span class="n">4</span><div><b>“I need now” band</b>Stands out by its dark surround, not size. <a href="#tp-experience">→ 02</a></div></li>
+            </ol>
+          </figcaption>
+        </figure>
+        <figure class="annot">
+          <div class="iphone"><div class="bz"><div class="scr" style="--sb:#ffedd8">
+            <img src="assets/img/tp-swap.png" alt="Crowd alert: Level 3 just got busy. Swap Dinosaurs and Pacific Worlds? Waits of 15 minutes and no wait. Swap order or Keep, with a preview of the route after the swap." loading="lazy">
+            <a class="pin" href="#tp-d2" style="left:100%;top:14%" aria-label="Callout 5: what changed, see decision 2">5</a>
+            <a class="pin" href="#tp-d2" style="left:0;top:34%" aria-label="Callout 6: swap or keep, see decision 2">6</a>
+            <a class="pin" href="#tp-d2" style="left:100%;top:42.5%" aria-label="Callout 7: preview, see decision 2">7</a>
+          </div></div></div>
+          <figcaption><span class="eyebrow">B · Suggested crowd swap</span>
+            <ol class="notes">
+              <li><span class="n">5</span><div><b>Says what changed</b>“Level 3 just got busy.” <a href="#tp-d2">→ decision 2</a></div></li>
+              <li><span class="n">6</span><div><b>The visitor decides</b>Swap order or Keep. <a href="#tp-d2">→ decision 2</a></div></li>
+              <li><span class="n">7</span><div><b>Preview before committing</b>Same 75 minutes, new order. <a href="#tp-d2">→ decision 2</a></div></li>
+            </ol>
+          </figcaption>
+        </figure>
+        <figure class="annot">
+          <div class="iphone"><div class="bz"><div class="scr" style="--sb:#f2efe9">
+            <img src="assets/img/tp-map.png" alt="Map with Toilets, Lifts, Seats and Food filters, gallery busyness shown as bars, a dotted route from You to the family toilets, and a list showing Family toilets on Level 3 with a change table." loading="lazy">
+            <a class="pin" href="#tp-experience" style="left:100%;top:21.4%" aria-label="Callout 8: needs as one-tap filters, see family experience">8</a>
+            <a class="pin" href="#tp-a11y" style="left:0;top:31.5%" aria-label="Callout 9: busyness as bars, see accessibility">9</a>
+            <a class="pin" href="#tp-experience" style="left:100%;top:83.5%" aria-label="Callout 10: nearest answer first, see family experience">10</a>
+          </div></div></div>
+          <figcaption><span class="eyebrow">C · Immediate need / map</span>
+            <ol class="notes">
+              <li><span class="n">8</span><div><b>Needs as one-tap filters</b>Toilets, lifts, seats, food. <a href="#tp-experience">→ 02</a></div></li>
+              <li><span class="n">9</span><div><b>Busyness as bars</b>Bar count, not colour alone. <a href="#tp-a11y">→ 06</a></div></li>
+              <li><span class="n">10</span><div><b>Nearest answer first</b>Level and change table, top of the list. <a href="#tp-experience">→ 02</a></div></li>
+            </ol>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 05 -->
+    <section class="sec" id="tp-edge">
+      <header class="sec-head">
+        <span class="sec-num">05</span>
+        <h2 class="h2">Exploring a high-stakes edge case</h2>
+        <p class="lead">I also explored what the experience might do if a child became separated from their caregiver. This is a hypothetical workflow, not a model of Te Papa's actual lost-child or security procedure.</p>
+        <div class="cl-row"><span class="cl prop">Proposed · requires staff and privacy validation</span></div>
+      </header>
+      <div class="f-body">
+        <div>
+          <div class="mm" style="--fa:var(--prop)"><span>Core interaction principle</span><b>The parent explicitly triggers the alert. The concept then shares only the information needed for that case.</b></div>
+          <div class="cols cols-2">
+            <div class="col"><h4>One primary action</h4><p>“Alert staff now” is the only primary button on a screen used under stress.</p></div>
+            <div class="col"><h4>Shared on demand</h4><p>The child card stays on the phone until the parent raises the alert. What staff would see, and how the case closes, needs staff and privacy input.</p></div>
+          </div>
+          <p class="cap">The multi-role workflow and access model are in <a href="#tp-model">Detail B</a>.</p>
+        </div>
+        <figure class="f-vis">
+          <div class="iphone"><div class="bz"><div class="scr" style="--sb:#af2317;--sbt:#fff"><img src="assets/img/tp-alert.png" alt="Lost-child screen: Stay where you are, we'll help find Mia. Alert staff now. Mia's card to show staff. Steps: tell any staff in uniform, family meeting point, call security. We've found her closes the case." loading="lazy"></div></div></div>
+          <figcaption><span>Family-facing alert screen</span><span class="tag figma">Designed in Figma</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 06 -->
+    <section class="sec" id="tp-a11y">
+      <header class="sec-head">
+        <span class="sec-num">06</span>
+        <h2 class="h2">Accessibility</h2>
+        <p class="lead">A contrast check of the Figma screens against WCAG AA, measured from the exports. Two crowd labels fail on the cream background. This is a self-audit of the concept screens, not a WCAG compliance claim or accessibility study with users.</p>
+        <div class="cl-row"><span class="cl obs">Observed · accessibility self-audit</span><span class="cl unv">Not tested with users</span></div>
+      </header>
+      <div class="rows ca" role="table" aria-label="Contrast check">
+        <div class="r h" role="row"><span>Text</span><span>Ratio</span><span>Result</span><span>Proposed fix</span><span>New ratio</span></div>
+        <div class="r" role="row"><span class="chip2"><i style="background:#c26a12"></i>“Some” crowd label on cream</span><div><span class="lbl">Ratio</span><p>3.54:1</p></div><div><span class="fail">Fail</span></div><div><span class="lbl">Fix</span><p>#C26A12 → #A3560C</p></div><div><span class="pass">4.88:1</span></div></div>
+        <div class="r" role="row"><span class="chip2"><i style="background:#2f7d62"></i>“Quiet” crowd label on cream</span><div><span class="lbl">Ratio</span><p>4.49:1</p></div><div><span class="fail">Fail, just under</span></div><div><span class="lbl">Fix</span><p>#2F7D62 → #2A735A</p></div><div><span class="pass">5.14:1</span></div></div>
+        <div class="r" role="row"><span class="chip2"><i style="background:#4e5a55"></i>Grey meta text on cream</span><div><span class="lbl">Ratio</span><p>6.51:1</p></div><div><span class="pass">Pass</span></div><div><span class="lbl">Fix</span><p>—</p></div><div></div></div>
+        <div class="r" role="row"><span class="chip2"><i style="background:#b42318"></i>“Busy” red on cream · white on alert red · white on green button</span><div><span class="lbl">Ratio</span><p>5.95 / 7.41 / 9.69:1</p></div><div><span class="pass">Pass</span></div><div><span class="lbl">Fix</span><p>—</p></div><div></div></div>
+      </div>
+      <div class="cols cols-3 sub" style="margin-top:40px">
+        <div class="col"><h4>Crowd level isn't colour alone</h4><p>The meter uses one, two or three bars plus a word (Quiet, Some, Busy), so it still reads in greyscale.</p></div>
+        <div class="col"><h4>One primary action under stress</h4><p>The lost-child screen has a single primary button, “Alert staff now”.</p></div>
+        <div class="col"><h4>Not yet checked</h4><p>Screen-reader labels, large text and te reo Māori content haven't been designed or checked.</p></div>
+      </div>
+    </section>
+
+    <!-- 07 -->
+    <section class="sec" id="tp-test">
+      <header class="sec-head">
+        <span class="sec-num">07</span>
+        <h2 class="h2">What I would test before taking the concept further</h2>
+        <p class="lead">Because the core needs and workflows are still hypotheses, the next step would be validation rather than adding more features.</p>
+        <div class="cl-row"><span class="cl unv">Not yet done</span></div>
+      </header>
+      <div class="cols cols-3">
+        <div class="col strong"><span class="eyebrow">1 · Families</span><p>Test whether parents recognise the immediate-need shortcuts, understand the route logic and would accept or reject a suggested crowd swap.</p><p class="mono muted" style="margin-top:10px">Method: short contextual sessions with parents or caregivers during or shortly after a museum visit.</p></div>
+        <div class="col strong"><span class="eyebrow">2 · Front-of-house / Security</span><p>Walk through the high-stakes alert concept to understand whether the handover, information shown and escalation assumptions fit real museum practice.</p><p class="mono muted" style="margin-top:10px">Method: staff workflow walkthrough.</p></div>
+        <div class="col strong"><span class="eyebrow">3 · IT / Privacy</span><p>Check whether the proposed data minimisation, temporary sharing, connectivity assumptions and alert delivery are feasible.</p><p class="mono muted" style="margin-top:10px">Method: technical and privacy review.</p></div>
+      </div>
+      <p class="note sub" style="margin-top:40px"><b>Limitations:</b> No interviews or usability sessions were conducted with families or Te Papa staff. I had no access to internal museum data, security procedures, occupancy systems or technical architecture. The family needs, operational workflows and expected outcomes therefore remain hypotheses. The concept has not been implemented or reviewed by engineering. Te reo Māori and assistive-technology behaviour are not yet designed or validated.</p>
+      <p class="disclaim">Self-initiated concept. Not commissioned by, affiliated with or endorsed by Te Papa.</p>
+    </section>
+
+    <div class="depth-head" id="tp-detail"><h2>Detail</h2><span class="mono muted">Evidence, service model and supporting work</span></div>
+    <details class="more" id="tp-evidence">
+      <summary><span class="sec-num">A</span><h3>Evidence &amp; uncertainty</h3><span class="pm-ic" aria-hidden="true">+</span><p>What is observed, assumed, proposed and still unvalidated.</p></summary>
+      <div class="in">
+      <figure aria-label="16 statements: 3 observed, 4 assumed, 3 proposed, 6 unvalidated">
+        <div class="ev">
+          <span class="o" style="flex:3">3 <span class="lbl">observed</span></span>
+          <span class="a" style="flex:4">4 <span class="lbl">assumed</span></span>
+          <span class="p">3 <span class="lbl">proposed</span></span>
+          <span class="u">6 <span class="lbl">unvalidated</span></span>
+        </div>
+        <div class="ev-legend"><span>16 statements</span><span>No user or staff sessions</span></div>
+      </figure>
+      <div class="cols cols-4 ev-cols" style="margin-top:40px">
+        <div class="col o"><span class="cl obs">Observed</span><p class="muted">Public information, or measured in my own design</p>
+          <ul><li><b>Public visitor information.</b> Te Papa's public visitor information covers floors, facilities and family visits. I used it to map the basic navigation and facility context available to visitors.</li>
+          <li><b>Current public digital experience.</b> I reviewed the publicly available visitor experience as context for the concept. The no-account approach is my design proposal, not a response to a validated adoption problem.</li>
+          <li><b>Accessibility self-audit.</b> Contrast ratios measured from my own Figma exports.</li></ul></div>
+        <div class="col a"><span class="cl asm">Assumed</span><p class="muted">Working assumptions, because I had no access</p>
+          <ul>
+          <li><b>Venue data.</b> The concept assumes floor-level occupancy, facility locations and exhibit metadata are available. I haven't seen evidence that Te Papa has or combines these.</li><li><b>Family needs.</b> I assumed that parents visiting with young children may need quick access to toilets, lower-effort routes, crowd information and help during urgent situations.</li>
+          <li><b>Staff workflow.</b> I modelled six potential stakeholder groups (Visitor Experience, Front-of-house, Security, Venue Ops, Curatorial / Learning, and IT / Privacy) and gave each a plausible operational need.</li>
+          <li><b>System constraints.</b> I assumed floor-level rather than room-level occupancy, existing staff devices, limited in-building connectivity, and a requirement to minimise children's personal data.</li>
+          <li class="muted">These assumptions were not confirmed with families or Te Papa staff.</li></ul></div>
+        <div class="col p"><span class="cl prop">Proposed</span><p class="muted">My design decisions</p>
+          <ul><li><b>A family visit companion</b> for in-the-moment decisions, backed by a hypothetical service model (Detail B).</li>
+          <li><b>A permission model that limits child information by role and time.</b> A parent can raise an alert; staff would receive only the information needed for that case.</li>
+          <li><b>A no-account entry point.</b> Family setup information is stored on the device, rather than requiring an account before the visitor gets any value.</li></ul></div>
+        <div class="col u"><span class="cl unv">Unvalidated</span><p class="muted">I did not validate whether:</p>
+          <ul><li>families actually leave early because children become tired;</li>
+          <li>crowd peaks create the specific bottlenecks modelled;</li>
+          <li>parents currently search for a lost child before contacting staff;</li>
+          <li>Front-of-house staff experience the proposed volume of routine questions;</li>
+          <li>the proposed workflow would reduce staff workload or incident-response time;</li>
+          <li>families would use live crowd information to change their route.</li></ul></div>
+      </div>
+      <div class="sub">
+        <div class="sub-head"><h3>Methods</h3></div>
+        <div class="cols cols-4">
+          <div class="col"><h4>Public visitor information</h4><p>Floors, facilities, family info</p></div>
+          <div class="col"><h4>Role and process mapping</h4><p>6 hypothetical roles, assumed</p></div>
+          <div class="col"><h4>Journey map: first question to closed incident</h4><p>Family + staff</p></div>
+          <div class="col"><h4>Privacy &amp; bicultural considerations</h4><p>Data minimisation · bilingual experience identified as future work</p></div>
+        </div>
+      </div>
+      </div>
+    </details>
+    <details class="more" id="tp-model">
+      <summary><span class="sec-num">B</span><h3>Service &amp; role model</h3><span class="pm-ic" aria-hidden="true">+</span><p>Three-layer service model, hypothetical roles, an exploratory access matrix and the lost-child workflow. Not Te Papa's organisation.</p></summary>
+      <div class="in">
+      <p class="prose" style="margin-bottom:28px"><span style="color:var(--ink-2)">I used a hypothetical service model to pressure-test whether the family-facing concept raised operational, permission or ownership questions. These roles and workflows were not confirmed with Te Papa staff.</span></p>
+      <figure class="dg" id="tp-layers" aria-label="Three-layer service model. Layer 1, family visitor experience (planning, navigation, route changes): used by parents and caregivers, with exhibit metadata maintained by Curatorial. Layer 2, live venue information (floor-level crowding, facilities, route conditions): thresholds set by Venue Ops; when a floor gets busy it suggests a route swap to layer 1. Layer 3, staff operations: a parent raises an alert, front-of-house hosts accept and Security escalates and closes; the child card is shared for one case only. IT and Privacy administer roles and the audit trail across all three layers.">
+        <div class="dg-head"><b>Three product layers, and who uses each</b><span class="cl-row"><span class="cl prop">Proposed</span><span class="cl asm">Roles assumed · not based on staff interviews</span></span></div>
+        <div class="layers">
+          <div class="stack">
+            <div class="layer">
+              <div class="ly"><span class="mono">1 · for families</span><b>Family visitor experience</b><p>Planning, navigation, route changes, “I need now”.</p></div>
+              <div class="ly-roles"><span class="role"><i><svg class="icon" aria-hidden="true"><use href="#i-family"/></svg></i>Parent / caregiver <small>uses</small></span><span class="role staff"><i><svg class="icon" aria-hidden="true"><use href="#i-frame"/></svg></i>Curatorial <small>feeds</small></span></div>
+            </div>
+            <div class="ly-link"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up"/></svg>floor gets busy → suggest a swap</div>
+            <div class="layer live">
+              <div class="ly"><span class="mono">2 · shared data</span><b>Live venue information</b><p>Floor crowding, facilities, route conditions. Floor level only.</p></div>
+              <div class="ly-roles"><span class="role staff"><i><svg class="icon" aria-hidden="true"><use href="#i-gauge"/></svg></i>Venue Ops <small>sets thresholds</small></span></div>
+            </div>
+            <div class="ly-link"><svg class="icon" aria-hidden="true"><use href="#i-arrow-down"/></svg>“Alert staff now” → child card shared for one case</div>
+            <div class="layer">
+              <div class="ly"><span class="mono">3 · for staff</span><b>Staff operations</b><p>Front-of-house, security and venue ops: alerts and thresholds.</p></div>
+              <div class="ly-roles"><span class="role staff"><i><svg class="icon" aria-hidden="true"><use href="#i-badge"/></svg></i>Front-of-house host <small>accepts</small></span><span class="role staff"><i><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></i>Security lead <small>closes</small></span></div>
+            </div>
+          </div>
+          <div class="rail"><svg class="icon" aria-hidden="true"><use href="#i-key"/></svg><span>IT &amp; Privacy · roles + audit, all layers</span></div>
+        </div>
+      </figure>
+      <div class="sub">
+        <div class="sub-head"><h3>Hypothetical roles</h3><span class="cl asm">Roles assumed · not based on staff interviews</span></div>
+        <div class="cols cols-3">
+        <div class="col"><span class="role"><i><svg class="icon" aria-hidden="true"><use href="#i-family"/></svg></i><small>Visitor</small></span><h4 style="margin-top:12px">Parent / caregiver</h4><p>Would use the family-facing experience for navigation, immediate needs and optional urgent support.</p></div>
+        <div class="col"><span class="role staff"><i><svg class="icon" aria-hidden="true"><use href="#i-badge"/></svg></i><small>Staff · floor</small></span><h4 style="margin-top:12px">Front-of-house host</h4><p>In the hypothetical service model, could receive a scoped alert and help connect the family with the appropriate response.</p></div>
+        <div class="col"><span class="role staff"><i><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></i><small>Staff · escalation</small></span><h4 style="margin-top:12px">Security lead</h4><p>The concept assumes an escalation role would need enough case information to respond if an alert remained unresolved.</p></div>
+        <div class="col"><span class="role staff"><i><svg class="icon" aria-hidden="true"><use href="#i-gauge"/></svg></i><small>Operations</small></span><h4 style="margin-top:12px">Venue Ops manager</h4><p>The routing concept assumes someone would maintain or approve the crowd thresholds used for route suggestions.</p></div>
+        <div class="col"><span class="role staff"><i><svg class="icon" aria-hidden="true"><use href="#i-frame"/></svg></i><small>Content</small></span><h4 style="margin-top:12px">Curatorial / Learning</h4><p>The concept assumes exhibit information such as location and visitor-facing attributes would need an accountable content owner.</p></div>
+        <div class="col"><span class="role staff"><i><svg class="icon" aria-hidden="true"><use href="#i-key"/></svg></i><small>Governance</small></span><h4 style="margin-top:12px">IT &amp; Privacy</h4><p>The concept would require technical and privacy review of access, temporary sharing, retention and system administration.</p></div>
+      </div>
+      </div>
+      <div class="sub">
+        <div class="sub-head"><h3>Exploratory access matrix</h3><span class="cl prop">Proposed</span></div>
+        <p class="prose" style="margin-bottom:24px"><span style="color:var(--ink-2)">This matrix explores one possible least-access model for the concept. It is not Te Papa's permission model and has not been reviewed by Security, Privacy or IT.</span></p>
+        <div class="pm" role="table" aria-label="Exploratory proposed access matrix: six hypothetical roles by five data objects. Proposed access is standing, scoped for one case, or none. Not Te Papa's permission model.">
+          <div role="row" style="display:contents">
+            <span></span>
+            <span class="ch" role="columnheader">Child profile</span><span class="ch" role="columnheader">Live alert</span><span class="ch" role="columnheader">Crowd thresholds</span><span class="ch" role="columnheader">Exhibit metadata</span><span class="ch" role="columnheader">Audit log</span>
+          </div>
+          <div role="row" style="display:contents">
+            <span class="rh" role="rowheader"><span class="role"><i><svg class="icon" aria-hidden="true"><use href="#i-family"/></svg></i>Parent</span></span>
+            <span class="c full" role="cell" aria-label="Full: own"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Own</span>
+            <span class="c scoped" role="cell" aria-label="Scoped: raise"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>Raise</span>
+            <span class="c none" role="cell" aria-label="None">—</span>
+            <span class="c full" role="cell" aria-label="Full: view"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>View</span>
+            <span class="c none" role="cell" aria-label="None">—</span>
+          </div>
+          <div role="row" style="display:contents">
+            <span class="rh" role="rowheader"><span class="role staff"><i><svg class="icon" aria-hidden="true"><use href="#i-badge"/></svg></i>Host</span></span>
+            <span class="c scoped" role="cell" aria-label="Scoped: on alert"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>On alert</span>
+            <span class="c scoped" role="cell" aria-label="Scoped: accept"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>Accept</span>
+            <span class="c none" role="cell" aria-label="None">—</span>
+            <span class="c full" role="cell" aria-label="Full: view"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>View</span>
+            <span class="c none" role="cell" aria-label="None">—</span>
+          </div>
+          <div role="row" style="display:contents">
+            <span class="rh" role="rowheader"><span class="role staff"><i><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></i>Security</span></span>
+            <span class="c scoped" role="cell" aria-label="Scoped: on alert"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>On alert</span>
+            <span class="c full" role="cell" aria-label="Full: all, close"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>All · close</span>
+            <span class="c none" role="cell" aria-label="None">—</span>
+            <span class="c none" role="cell" aria-label="None">—</span>
+            <span class="c scoped" role="cell" aria-label="Scoped: own cases"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>Own cases</span>
+          </div>
+          <div role="row" style="display:contents">
+            <span class="rh" role="rowheader"><span class="role staff"><i><svg class="icon" aria-hidden="true"><use href="#i-gauge"/></svg></i>Venue Ops</span></span>
+            <span class="c none" role="cell" aria-label="No proposed access">No access</span>
+            <span class="c scoped" role="cell" aria-label="Scoped: count only"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>Count only</span>
+            <span class="c full" role="cell" aria-label="Full: edit"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Edit</span>
+            <span class="c none" role="cell" aria-label="None">—</span>
+            <span class="c none" role="cell" aria-label="None">—</span>
+          </div>
+          <div role="row" style="display:contents">
+            <span class="rh" role="rowheader"><span class="role staff"><i><svg class="icon" aria-hidden="true"><use href="#i-frame"/></svg></i>Curatorial</span></span>
+            <span class="c none" role="cell" aria-label="No proposed access">No access</span>
+            <span class="c none" role="cell" aria-label="None">—</span>
+            <span class="c none" role="cell" aria-label="None">—</span>
+            <span class="c full" role="cell" aria-label="Full: edit"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Edit</span>
+            <span class="c none" role="cell" aria-label="None">—</span>
+          </div>
+          <div role="row" style="display:contents">
+            <span class="rh" role="rowheader"><span class="role staff"><i><svg class="icon" aria-hidden="true"><use href="#i-key"/></svg></i>IT admin</span></span>
+            <span class="c none" role="cell" aria-label="No proposed access">No access</span>
+            <span class="c none" role="cell" aria-label="None">—</span>
+            <span class="c none" role="cell" aria-label="None">—</span>
+            <span class="c none" role="cell" aria-label="None">—</span>
+            <span class="c full" role="cell" aria-label="Full"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Full</span>
+          </div>
+        </div>
+        <div class="pm-legend" aria-hidden="true">
+          <span><i class="full"></i>Proposed standing access</span>
+          <span><i class="scoped"></i>Proposed scoped access · one case, or counts only</span>
+          <span><i class="none"></i>No proposed access</span>
+        </div>
+      </div>
+      <div class="sub">
+        <div class="sub-head"><h3>Hypothetical lost-child workflow across roles</h3><span class="cl-row"><span class="cl prop">Proposed</span><span class="cl asm">Not Te Papa's procedure</span></span></div>
+        <div class="swim" role="list" aria-label="Hypothetical lost-child alert workflow across four lanes: Parent, Host, Security and System. Not Te Papa's procedure.">
+          <span class="lane-h" style="grid-row:1"><span class="role"><i><svg class="icon" aria-hidden="true"><use href="#i-family"/></svg></i>Parent</span></span><span class="lane-bg" style="grid-row:1"></span>
+          <span class="lane-h" style="grid-row:2"><span class="role staff"><i><svg class="icon" aria-hidden="true"><use href="#i-badge"/></svg></i>Host</span></span><span class="lane-bg" style="grid-row:2"></span>
+          <span class="lane-h" style="grid-row:3"><span class="role staff"><i><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></i>Security</span></span><span class="lane-bg" style="grid-row:3"></span>
+          <span class="lane-h" style="grid-row:4"><span class="role staff"><i><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></i>System</span></span><span class="lane-bg" style="grid-row:4"></span>
+          <div class="step" role="listitem" style="grid-column:2;grid-row:1"><span class="ln cl concept">Parent</span><span class="mono">Step 1</span><b>Taps “Alert staff now”</b>Child card and current floor are shared.</div>
+          <div class="step" role="listitem" style="grid-column:3;grid-row:2"><span class="ln cl concept">Host</span><span class="mono">Step 2</span><b>A host could accept</b>Proposed: sees the child card for this case.</div>
+          <div class="step" role="listitem" style="grid-column:4;grid-row:3;border-style:dashed"><span class="ln cl concept">Security</span><span class="mono">If needed</span><b>Escalation, if unresolved</b>Proposed; real escalation path unknown.</div>
+          <div class="step close" role="listitem" style="grid-column:5;grid-row:1 / span 2"><span class="ln cl concept">Parent / Host</span><span class="mono">Close</span><b>“We've found her”</b>Proposed: the case closes in the app.</div>
+          <div class="step sys" role="listitem" style="grid-column:6;grid-row:4"><span class="ln cl concept">System</span><span class="mono">Auto</span><b>Shared access ends</b>Proposed shared access ends when the case closes. What, if anything, should be retained afterwards would require Privacy, Security and operational review.</div>
+        </div>
+      </div>
+      </div>
+    </details>
+    <details class="more" id="tp-ops">
+      <summary><span class="sec-num">C</span><h3>Operational exploration</h3><span class="pm-ic" aria-hidden="true">+</span><p>An illustrative venue-data console and the constraints I assumed.</p></summary>
+      <div class="in">
+      <div class="sub-head" style="margin-top:0"><h3>Exploring how venue data might be maintained</h3><span class="cl-row"><span class="cl concept">Illustrative operational concept</span><span class="tag html">HTML/CSS prototype · coding assistance</span></span></div>
+      <p class="prose" style="margin-bottom:28px"><span style="color:var(--ink-2)">Illustrative operational concept · not based on Te Papa's internal tools or workflows. I don't know whether Curatorial or Venue Ops teams would work this way.</span></p>
+      <figure class="console" aria-label="Illustrative operational concept, not based on Te Papa's internal tools. Ops console with two panels. Exhibit metadata, editable by Curatorial: two exhibits selected, set noise level to Quiet; Te Taiao Nature changes from Some to Quiet, Pacific Worlds has no change, Dinosaurs is not selected. Busy thresholds, editable by Venue Ops: a Quiet, Some and Busy band for each of four floors, applied to every floor in one edit.">
+          <div class="bar"><i></i><i></i><i></i><span>ops-console · venue · Exhibits &amp; floors</span></div>
+          <div class="body">
+            <nav aria-hidden="true">
+              <div class="org">Ops console<small>Role-scoped views</small></div>
+              <a class="on"><svg class="icon"><use href="#i-frame"/></svg>Exhibits</a>
+              <a class="on"><svg class="icon"><use href="#i-gauge"/></svg>Floors</a>
+              <a><svg class="icon"><use href="#i-alert"/></svg>Alerts</a>
+              <a><svg class="icon"><use href="#i-list"/></svg>Audit log</a>
+              <a><svg class="icon"><use href="#i-key"/></svg>Roles</a>
+            </nav>
+            <main>
+              <div class="cpanels">
+                <div class="cpanel">
+                  <h5>Exhibit metadata <span class="role staff"><i><svg class="icon" aria-hidden="true"><use href="#i-frame"/></svg></i><small>Curatorial · edit</small></span></h5>
+                  <div class="toolbar"><b>2 exhibits selected</b><span class="chg">· Set noise level → Quiet</span></div>
+                  <div class="ctable">
+                    <div class="tr th"><span></span><span>Exhibit</span><span>Type</span><span>Noise</span></div>
+                    <div class="tr"><span class="cb on"><svg class="icon"><use href="#i-check"/></svg></span><span>Te Taiao Nature</span><span>hands-on</span><span class="chg"><s>Some</s>→<b>Quiet</b></span></div>
+                    <div class="tr"><span class="cb on"><svg class="icon"><use href="#i-check"/></svg></span><span>Pacific Worlds</span><span>gallery</span><span class="chg">No change</span></div>
+                    <div class="tr dim"><span class="cb"></span><span>Dinosaurs</span><span>Level 3</span><span class="chg">Not selected</span></div>
+                  </div>
+                  <div class="impact"><span>Visitors will see: <b>Te Taiao · Quiet</b></span><span class="cbtn p">Preview before publish</span></div>
+                </div>
+                <div class="cpanel">
+                  <h5>Busy thresholds <span class="role staff"><i><svg class="icon" aria-hidden="true"><use href="#i-gauge"/></svg></i><small>Venue Ops · edit</small></span></h5>
+                  <div class="thr"><span>Level 1</span><span class="bar3"><i class="q"></i><i class="s"></i><i class="b"></i><em style="left:60%"></em><em style="left:85%"></em></span></div>
+                  <div class="thr"><span>Level 2</span><span class="bar3"><i class="q"></i><i class="s"></i><i class="b"></i><em style="left:60%"></em><em style="left:85%"></em></span></div>
+                  <div class="thr"><span>Level 3</span><span class="bar3"><i class="q"></i><i class="s"></i><i class="b"></i><em style="left:60%"></em><em style="left:85%"></em></span></div>
+                  <div class="thr"><span>Level 4</span><span class="bar3"><i class="q"></i><i class="s"></i><i class="b"></i><em style="left:60%"></em><em style="left:85%"></em></span></div>
+                  <div class="thr-scale"><span>Quiet</span><span>Some</span><span>Busy</span></div>
+                  <div class="apply"><span class="cb on"><svg class="icon"><use href="#i-check"/></svg></span>Apply to every floor in one edit</div>
+                  <p class="mono muted" style="margin-top:10px">Floor counts only · no personal data</p>
+                </div>
+              </div>
+            </main>
+          </div>
+        </figure>
+      <p class="fig-cap">2 exhibits selected · Set noise level → Quiet · Illustrative · preview before publish</p>
+      <div class="sub">
+        <div class="sub-head"><h3>Constraints I assumed</h3><span class="cl asm">Assumed</span></div>
+        <div class="cols cols-5">
+          <div class="col"><span class="cl asm" style="margin-bottom:8px">Assumed</span><h4>Occupancy data is floor-level only</h4><p>The route could know a level is busy, not which gallery.</p></div>
+          <div class="col"><span class="cl prop" style="margin-bottom:8px">Proposed response</span><h4>Privacy-sensitive child information</h4><p>Proposed response: minimise collection and keep family setup on-device by default.</p></div>
+          <div class="col"><span class="cl unv" style="margin-bottom:8px">Future work</span><h4>Bilingual experience would need to be designed from the start</h4><p>The welcome screen offers a te reo Māori option, but bilingual content isn't designed yet. It would need to be developed with fluent speakers rather than machine-translated.</p></div>
+          <div class="col"><span class="cl asm" style="margin-bottom:8px">Assumed</span><h4>Patchy in-building connectivity</h4><p>An offline map would likely be needed.</p></div>
+          <div class="col"><span class="cl asm" style="margin-bottom:8px">Assumed</span><h4>No new staff hardware</h4><p>Alerts would reuse existing staff devices, if suitable ones exist.</p></div>
+        </div>
+      </div>
+      </div>
+    </details>
+    <details class="more" id="tp-tradeoffs">
+      <summary><span class="sec-num">D</span><h3>Trade-offs</h3><span class="pm-ic" aria-hidden="true">+</span><p>Tensions I expected and what each decision gives up.</p></summary>
+      <div class="in">
+      <p class="prose" style="margin-bottom:24px"><span style="color:var(--ink-2)">Tensions I expected, not ones raised by anyone at Te Papa.</span></p>
+      <div class="rows" role="table" aria-label="Trade-offs">
+        <div class="r h" role="row" style="grid-template-columns:1.2fr 1.4fr 1.2fr"><span>Decision</span><span>Likely tension</span><span>What I gave up</span></div>
+        <div class="r" role="row" style="grid-template-columns:1.2fr 1.4fr 1.2fr"><b role="cell">No account for the family experience</b><div role="cell"><span class="lbl">Likely tension</span><p>Lower entry friction vs fewer opportunities to retain preferences or understand repeat use</p></div><div role="cell"><span class="lbl">What I gave up</span><p>Less persistent visitor data by design</p></div></div>
+        <div class="r" role="row" style="grid-template-columns:1.2fr 1.4fr 1.2fr"><b role="cell">Suggest a crowd swap, with Keep as an option</b><div role="cell"><span class="lbl">Likely tension</span><p>Optimising the suggested route vs preserving visitor control</p></div><div role="cell"><span class="lbl">What I gave up</span><p>Suggestions may have less effect if visitors choose to keep their original route</p></div></div>
+        <div class="r" role="row" style="grid-template-columns:1.2fr 1.4fr 1.2fr"><b role="cell">Floor-level data with a three-state meter</b><div role="cell"><span class="lbl">Likely tension</span><p>More precise crowd information vs the additional data and infrastructure that would be required</p></div><div role="cell"><span class="lbl">What I gave up</span><p>The route can't tell which gallery is busy</p></div></div>
+        <div class="r" role="row" style="grid-template-columns:1.2fr 1.4fr 1.2fr"><b role="cell">Reuse staff devices, if suitable</b><div role="cell"><span class="lbl">Likely tension</span><p>A dedicated alert interface vs integrating with tools staff may already use</p></div><div role="cell"><span class="lbl">What I gave up</span><p>Feasibility and notification reliability would need technical and staff validation</p></div></div>
+        <div class="r" role="row" style="grid-template-columns:1.2fr 1.4fr 1.2fr"><b role="cell">Reusable components <span class="cl asm" style="display:flex;margin-top:6px">Speculative</span></b><div role="cell"><span class="lbl">Likely tension</span><p>Designing for this concept vs allowing future reuse</p></div><div role="cell"><span class="lbl">What I gave up</span><p>Some additional systemisation during concept development</p></div></div>
+      </div>
+      </div>
+    </details>
+    <details class="more" id="tp-system">
+      <summary><span class="sec-num">E</span><h3>Reusable UI foundations</h3><span class="pm-ic" aria-hidden="true">+</span><p>Figma components, tokens and the three-state crowd meter.</p></summary>
+      <div class="in">
+      <p class="prose" style="margin-bottom:24px"><span style="color:var(--ink-2)">I built the concept with reusable Figma components and tokens so the interface could remain internally consistent. Reuse by other venues is a design possibility, not a validated product strategy.</span></p>
+      <figure>
+        <div class="shot"><img src="assets/img/tp-style.jpg" alt="Design system: five layout rules (lock to edges, dense but grouped, show don't label, one emphasis per screen, no cards in cards), colour tokens, a three-state crowd meter, type scale, the row unit, buttons and the I need now band." loading="lazy"></div>
+        <figcaption class="fig-cap" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap"><span>Five layout rules, one row component and a three-state crowd meter, built as Figma components with tokens.</span><span class="tag figma">Designed in Figma</span></figcaption>
+      </figure>
+      </div>
+    </details>
+    <details class="more" id="tp-next">
+      <summary><span class="sec-num">F</span><h3>Proposed metrics</h3><span class="pm-ic" aria-hidden="true">+</span><p>Three possible measures. No baseline or production data.</p></summary>
+      <div class="in">
+      <div class="rows metrics" role="table" aria-label="Proposed metrics">
+        <div class="r h" role="row"><span>Area</span><span>Metric</span><span>Source</span><span>Status</span></div>
+        <div class="r" role="row"><b>Family routing</b><div><span class="lbl">Metric</span><p>Percentage of suggested reroutes accepted</p></div><div><span class="lbl">Source</span><p>App analytics (assumed)</p></div><div><span class="cl unv">No baseline</span></div></div>
+        <div class="r" role="row"><b>Visitor support</b><div><span class="lbl">Metric</span><p>Routine navigation requests per visitor</p></div><div><span class="lbl">Source</span><p>Front-of-house records (assumed)</p></div><div><span class="cl unv">No baseline</span></div></div>
+        <div class="r" role="row"><b>Urgent workflow</b><div><span class="lbl">Metric</span><p>Median time from alert to staff acceptance</p></div><div><span class="lbl">Source</span><p>Alert logs (assumed)</p></div><div><span class="cl unv">No baseline</span></div></div>
+      </div>
+      <p class="cap">Proposed metrics · no baseline or production data. These are not current Te Papa metrics.</p>
+      </div>
+    </details>
+
+    <nav class="next" aria-label="More work">
+      <a href="cityfitness.html"><small>← Previous case</small><b>CityFitness</b></a>
+      <a href="index.html#skills"><small>Next</small><b>Skills &amp; tools →</b></a>
+    </nav>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Penny Wei · Product Designer · Wellington, NZ</span>
+    <span>Case studies are self-initiated concepts, not affiliated with CityFitness or Te Papa.</span>
+    <a href="#">Back to top ↑</a>
+  </div>
+</footer>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
